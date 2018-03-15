@@ -118,9 +118,3 @@ li a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 568px) {
-  .img1, .img2, .img3, .img4 {
-    background-attachment: scroll;
-  }
-}
-
