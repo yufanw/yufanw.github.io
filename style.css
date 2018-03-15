@@ -9,7 +9,7 @@ body {
   color: #666;
 }
 
-h4 {
+h5 {
   margin-bottom: 0;
 }
 
@@ -35,15 +35,15 @@ li a:hover {
 
 .img1, .img2, .img3, .img4 {
   position: relative;
-  opacity: 0.75;
-  background-position: center;
+  opacity: 0.70;
+  background-position: 30% 70%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .img2, .img3, .img4 {
-  min-height: 300px;
+  min-height: 400px;
 }
 
 .img1 {
@@ -100,6 +100,7 @@ li a:hover {
   font-size: 2em;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-shadow: 0.01em 0 0.1em #000;
 }
 
 .text .border {
@@ -110,6 +111,7 @@ li a:hover {
 
 .text .border.trans {
   background-color: transparent;
+  color: #f4f4f4;
 }
 
 .text .border.contact:hover {
