@@ -142,9 +142,17 @@ li a:hover {
 }
 
 @media only screen and (max-device-width: 414px), (max-width: 700px) {
+  body {
+    font-size: 1.5em;
+  }
+
   .img1, .img2, .img3, .img4 {
     background-attachment: scroll;
     width: 100%;
+  }
+
+  .img2, .img3, .img4 {
+    min-height: 300px;
   }
 
   .section-lite img {
