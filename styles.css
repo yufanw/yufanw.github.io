@@ -1,0 +1,45 @@
+body {
+  font-family: georgia, 'times new roman', times, serif;
+  font-size: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 1rem;
+  display: grid;
+  grid-template-rows: 1fr minmax(150px, 300px) max-content auto 1fr;
+  height: 100vh;
+  justify-items: center;
+}
+
+div.wrapper img {
+  grid-row: 2;
+  height: 100%;
+  border-radius: 50%;
+}
+
+div.wrapper h2 {
+  grid-row: 3;
+}
+
+div.wrapper nav {
+  list-style-type: none;
+  grid-row: 4;
+  display: inline-block;
+  text-align: center;
+}
+
+li {
+  float: left;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: teal;
+}
