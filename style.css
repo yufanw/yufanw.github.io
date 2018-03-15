@@ -1,0 +1,126 @@
+body {
+  font-family: "Lado", sans-serif;
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 1.8em;
+  margin: 0;
+  text-align: center;
+  height: 100vh;
+  color: #666;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+nav {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+}
+
+li {
+  float: left;
+  padding: 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li a:hover {
+  color: #ff7f50;
+}
+
+.img1, .img2, .img3, .img4 {
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.img2, .img3, .img4 {
+  min-height: 300px;
+}
+
+.img1 {
+  background-image: url(img/img1.jpeg);
+  min-height: 100%;
+}
+
+.img2 {
+  background-image: url(img/img2.jpeg);
+}
+
+.img3 {
+  background-image: url(img/img3.jpeg);
+}
+
+.img4 {
+  background-image: url(img/img4.jpeg);
+}
+
+.section {
+  padding: 2em 3em;
+}
+
+.section-lite {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+.section-lite img {
+  height: 2em;
+}
+
+.section-lite a:hover {
+  opacity: 0.6;
+}
+
+.section-nite {
+  background-color: #282e34;
+  color: #eaeaea;
+}
+
+.section-nite li {
+  padding: 0.5em;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.text .border {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.text .border.trans {
+  background-color: transparent;
+}
+
+.text .border.contact:hover {
+  background-color: #f5f5f5;
+  color: #708090;
+  cursor: pointer;
+}
+
+@media (max-width: 568px) {
+  .img1, .img2, .img3, .img4 {
+    background-attachment: scroll;
+  }
+}
+
