@@ -141,9 +141,9 @@ li a:hover {
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media only screen and (max-device-width: 414px), (max-width: 700px) {
+@media only screen and (max-device-width: 421px), (max-width: 700px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .img1, .img2, .img3, .img4 {
@@ -165,7 +165,7 @@ li a:hover {
   }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-device-width: 376px), (max-width: 430px) {
   .section-lite img {
     height: 8em;
   }
