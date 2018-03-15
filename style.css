@@ -94,6 +94,14 @@ li a:hover {
 
 .section-nite img {
   max-width: 10em;
+  max-height: 3em;
+  border: 0.3em solid white;
+  box-shadow: 0 4px 4px 0 rgba(250, 240, 230, 0.2), 0 6px 6px 0 rgba(250, 240, 230, 0.19);
+}
+
+.section-nite img:hover {
+  opacity: 0.7;
+  box-shadow: 0 4px 4px 0 rgba(250, 240, 230, 0.2), 0 6px 6px 0 rgba(250, 240, 230, 0.19);
 }
 
 .text {
