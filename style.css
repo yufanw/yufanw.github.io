@@ -152,26 +152,14 @@ li a:hover {
   }
 
   .grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .grid li:last-child {
-    grid-column: 1/3;
   }
 }
 
 @media only screen and (max-width: 430px) {
   .section-lite img {
     height: 8em;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .grid li:last-child {
-    grid-column: auto;
   }
 }
 
