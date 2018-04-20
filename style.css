@@ -148,6 +148,7 @@ li a:hover {
 
   .img1, .img2, .img3, .img4 {
     width: 100%;
+    background-attachment: scroll;
   }
 
   .img2, .img3, .img4 {
