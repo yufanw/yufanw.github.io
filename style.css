@@ -36,6 +36,7 @@ li a:hover {
 .img1, .img2, .img3, .img4 {
   position: relative;
   background-position: center;
+  opacity: 0.9;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
