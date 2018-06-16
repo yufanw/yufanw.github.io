@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   text-align: center;
   font-size: 48px;
 }
@@ -8,11 +9,11 @@ body {
 }
 
 .parallax img {
-  height: 150%;
-  opacity: 0.5;
+  height: 120%;
 }
 
 .text {
+  border-radius: 0.3em;
   padding: 1.7rem;
   background-color: #111;
   opacity: 0.9;
@@ -21,7 +22,16 @@ body {
   text-transform: uppercase;
 }
 
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+}
+
 .rainbow {
-  padding: 10%;
-  opacity: 0.9;
+  height: 15px;
+}
+
+footer {
+  font-size: 0.4em;
+  width: 100vw;
 }
