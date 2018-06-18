@@ -1,7 +1,8 @@
 body {
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   text-align: center;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .parallax-container {
@@ -9,7 +10,7 @@ body {
 }
 
 .parallax img {
-  height: 140%;
+  height: 150%;
 }
 
 .text {
@@ -18,7 +19,7 @@ body {
   background-color: #111;
   opacity: 0.9;
   color: white;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
@@ -32,6 +33,18 @@ body {
 }
 
 footer {
-  font-size: 0.4em;
-  width: 100vw;
+  font-size: 0.5em;
+  width: 100%;
+}
+
+@media screen and (max-width: 765px) {
+  .parallax-container {
+    height: 65vh;
+  }
+
+  footer {
+    font-size: 0.45em;
+    width: 100%;
+  }
+
 }
