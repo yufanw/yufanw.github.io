@@ -79,9 +79,6 @@ a:hover {
 }
 
 @media screen and (max-width: 765px) {
-  .parallax-container {
-    height: 65vh;
-  }
 
   footer {
     font-size: 0.45em;
