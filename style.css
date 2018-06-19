@@ -3,15 +3,21 @@ body {
   height: 100%;
   text-align: center;
   font-size: 32px;
+  background-color: black;
+}
+
+.outer {
+  height: 75vh;
+}
+
+.top {
+  transform-origin: top left;
 }
 
 .parallax-container {
-  height: 70vh;
+  height: 85vh;
 }
 
-.parallax img {
-  height: 150%;
-}
 
 .text {
   border-radius: 0.3em;
@@ -23,18 +29,53 @@ body {
   text-transform: uppercase;
 }
 
+.skewed {
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+}
+
+.unskewed {
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
+  z-index: 1001;
 }
 
 .rainbow {
   height: 15px;
+  z-index: 1001;
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  transform-origin: bottom right;
 }
 
 footer {
+  position: fixed;
   font-size: 0.5em;
+  bottom: 0;
+  left: 0;
   width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #ffb7c5;
 }
 
 @media screen and (max-width: 765px) {
