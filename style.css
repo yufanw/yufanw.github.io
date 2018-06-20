@@ -1,32 +1,59 @@
 body {
   font-family: 'Roboto', sans-serif;
-  height: 100%;
   text-align: center;
   font-size: 32px;
-  background-color: black;
-}
-
-.outer {
-  height: 75vh;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: rgba(236, 147, 174, 0.5);
 }
 
 .top {
   transform-origin: top left;
 }
 
-.parallax-container {
-  height: 85vh;
+.bot {
+  position: absolute;
+  left: -30px;
+  width: 110%;
+  transform-origin: bottom left;
+  z-index: -1;
 }
 
+.text {
+  -webkit-transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-out;
+}
+
+.text-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.icon {
+  justify-self: center;
+  width: 1em;
+}
+
+.container {
+  width: 50%;
+}
 
 .text {
+  min-width: 280px;
+  max-width: 420px;
   border-radius: 0.3em;
-  padding: 1.7rem;
-  background-color: #111;
-  opacity: 0.9;
+  padding: 1em 0 1em 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.69);
   color: white;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+}
+
+.text:hover {
+  background-color: rgba(209, 170, 110, 0.69);
+  letter-spacing: 0.12em;
+  color: black;
 }
 
 .skewed {
@@ -48,18 +75,10 @@ body {
 .grid-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  z-index: 1001;
 }
 
 .rainbow {
-  height: 15px;
-  z-index: 1001;
-  -webkit-transform: skewY(-5deg);
-  -moz-transform: skewY(-5deg);
-  -ms-transform: skewY(-5deg);
-  -o-transform: skewY(-5deg);
-  transform: skewY(-5deg);
-  transform-origin: bottom right;
+  height: 1rem;
 }
 
 footer {
