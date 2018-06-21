@@ -102,7 +102,11 @@ a:hover {
   }
   
   h4 {
-    font-size: 32px;
+    font-size: 30px;
+  }
+  
+  .icon {
+    height: 30px;
   }
 
 }
