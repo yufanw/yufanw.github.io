@@ -1,0 +1,15 @@
+{
+  "short_name": "Yufan's Site",
+  "name": "Yufan Wang's Personal Web Page",
+  "icons": [
+    {
+      "src": "/img/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#d3d3d3",
+  "display": "standalone",
+  "theme_color": "#d3d3d3"
+}
