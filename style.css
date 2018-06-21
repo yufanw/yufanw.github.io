@@ -29,7 +29,7 @@ body {
 }
 
 .icon {
-  height: 1.5em;
+  max-height: 2em;
 }
 
 .text {
