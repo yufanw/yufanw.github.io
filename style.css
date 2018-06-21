@@ -28,7 +28,7 @@ body {
 }
 
 .icon {
-  max-height: 2em;
+  height: 4em;
 }
 
 .text {
@@ -98,15 +98,12 @@ a:hover {
   footer {
     font-size: 16px;
     width: 100%;
-    height: 55px;
+    height: 2.2em;
+    padding: 0.1em;
   }
   
   h4 {
-    font-size: 30px;
-  }
-  
-  .icon {
-    height: 30px;
+    font-size: 26px;
   }
 
 }
