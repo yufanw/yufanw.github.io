@@ -7,3 +7,6 @@ PERFORMANCE: 100%
 ACCESSIBILITY: 100%
 BEST PRACTICES: 100%
 SEO: 100%
+
+
+React Avatar Picker: https://yufanw.github.io/React-Avatar-Picker
