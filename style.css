@@ -60,6 +60,20 @@ body {
   transform: skewY(-5deg);
 }
 
+.skewed.show {
+  overflow: visible;
+  z-index: -1;
+}
+
+.skewed.top {
+  z-index: 20000;
+}
+
+.bottom {
+  -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+}
+
 .unskewed {
   -webkit-transform: skewY(5deg);
   -moz-transform: skewY(5deg);
