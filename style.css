@@ -63,11 +63,6 @@ body {
   z-index: 1000;
 }
 
-.bottom {
-  -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-}
-
 .unskewed {
   -webkit-transform: skewY(5deg);
   -moz-transform: skewY(5deg);
