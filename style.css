@@ -43,11 +43,6 @@ body {
 
 .text:hover {
   background-color: rgba(233, 130, 144, 0.548);
-  text-shadow:
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
   letter-spacing: 0.2rem;
 }
 
@@ -62,16 +57,15 @@ body {
 
 .skewed.show {
   overflow: visible;
-  z-index: -1;
 }
 
 .skewed.top {
-  z-index: 20000;
+  z-index: 1000;
 }
 
 .bottom {
   -webkit-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .unskewed {
@@ -102,6 +96,8 @@ footer {
 
 a {
   color: inherit;
+  position: relative;
+  z-index: 1002;
 }
 
 a:hover {
