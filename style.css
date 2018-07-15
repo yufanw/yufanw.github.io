@@ -2,7 +2,10 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.473);
+  background-image: url('img/peek.png'); 
+  background-color: #fff;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
 .body-wrapper {
