@@ -1,6 +1,8 @@
 # yufanw.github.io
 
-Personal index website made using HTML, CSS, and Javascript. 
+Personal index website made using HTML, CSS, and Javascript.
+
+Demos are made in various frameworks (React, AngularJS, etc.).
 
 Page includes links to professional social media accounts.
 
