@@ -11,7 +11,7 @@ a:hover {
 }
 
 h5 {
-  animation: rainbow 28s infinite;
+  animation: rainbow 14s infinite;
 }
 
 @keyframes rainbow { 
