@@ -15,17 +15,17 @@ a:hover {
 }
 
 h4 {
-  animation: retro 14s infinite;
+  animation: retro 20s infinite;
 }
 
 @keyframes retro { 
-  0% { color: #00F1FF; }
-  12% { color: #0161E8; }
-  25% { color: #290CFF; } 
-  37% { color: #9B00E8; }
-  50% { color: #FF019A; }
-  62% { color: #9B00E8; }
-  75% { color: #290CFF; }
-  87% { color: #0161E8; }
-  100% { color: #00F1FF; }
+  0% { color: rgb(31, 195, 204); }
+  12% { color: rgb(56, 108, 180); }
+  25% { color: rgb(65, 48, 197); } 
+  37% { color: rgb(170, 0, 255); }
+  50% { color: rgb(218, 74, 160); }
+  62% { color: rgb(170, 0, 255); }
+  75% { color: rgb(65, 48, 197); }
+  87% { color: rgb(56, 108, 180); }
+  100% { color: rgb(31, 195, 204); }
 }
