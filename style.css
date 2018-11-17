@@ -6,21 +6,26 @@
   text-align: center;
 }
 
+.tracker {
+  padding: 20px;
+}
+
 a:hover {
   color: red;
 }
 
 h4 {
-  animation: rainbow 14s infinite;
+  animation: retro 14s infinite;
 }
 
-@keyframes rainbow { 
-  0% { color: #a00; }
-  12.5% { color: #f37500; }
-  25% { color: #cfc100; } 
-  50% { color: #7BC633; }
-  62.5% { color: #2D9DC1; }
-  75% { color: #572c86; }
-  87.5% { color: #e68484; }
-  100% { color: #a00; }
+@keyframes retro { 
+  0% { color: #00F1FF; }
+  12% { color: #0161E8; }
+  25% { color: #290CFF; } 
+  37% { color: #9B00E8; }
+  50% { color: #FF019A; }
+  62% { color: #9B00E8; }
+  75% { color: #290CFF; }
+  87% { color: #0161E8; }
+  100% { color: #00F1FF; }
 }
