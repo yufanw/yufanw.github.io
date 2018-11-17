@@ -6,15 +6,12 @@
   text-align: center;
 }
 
-.tracker {
-  padding: 20px;
-}
-
 a:hover {
   color: red;
 }
 
 h4 {
+  opacity: 0.7;
   animation: retro 20s infinite;
 }
 
