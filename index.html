@@ -18,11 +18,11 @@
 </head>
 <body>
   <div class="body-wrapper">
+    <h4>Yufan</h4>
 
-    <h4>Stay tuned</h4>
     <div class="links">
       <span>
-          &copy; 2018 Yufan Wang
+          &copy; 2018
           | <a href="mailto:yufansmail@gmail.com">Contact</a>
           | <a href="https://www.github.com/yufanw">Github</a>
           | <a href="https://www.linkedin.com/in/yufan-wang-web">LinkedIn</a>    
@@ -32,6 +32,13 @@
 
 </body>
 <script>
+  fetch('https://api.sos.ca.gov/returns/us-rep/district/39')
+    .then(res => {
+      return res.json();
+    })
+    .then(body => {
+      console.log(body);
+    })
   console.log(`
     "Nature cannot be fooled."
                 - Richard Feynman
