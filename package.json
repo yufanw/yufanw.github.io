@@ -1,0 +1,11 @@
+{
+  "name": "yufanw.github.io",
+  "version": "1.0.0",
+  "description": "Site for me to experiment",
+  "scripts": {},
+  "author": "Yufan Wang",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}

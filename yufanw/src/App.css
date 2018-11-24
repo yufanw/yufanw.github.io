@@ -1,0 +1,21 @@
+.app {
+  background: #eee;
+  font-family: 'Droid Serif', serif;
+}
+
+.app-wrapper {
+  padding: 0 10vw;
+  display: grid;
+  grid-template-rows: 1fr 100vh 1fr;
+}
+
+.app-body {
+  background: #efefef;
+}
+
+@media only screen and (max-width: 768px) {
+  .app-wrapper {
+    padding: 0 15px;
+  }
+}
+
