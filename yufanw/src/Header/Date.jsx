@@ -4,7 +4,7 @@ import moment from 'moment';
 export class Date extends Component {
 
   state = {
-    momentString: moment().format('dddd, MMMM Do YYYYY, h:mm:ss a'),
+    momentString: moment().format('dddd, MMM Do YYYYY, h:mm:ss a'),
   }
   componentDidMount() {
     this.startTimer();
@@ -12,7 +12,7 @@ export class Date extends Component {
 
   startTimer = () => {
     this.setState({
-      momentString: moment().format('dddd, MMMM Do YYYYY, h:mm:ss a'),
+      momentString: moment().format('dddd, MMM Do YYYY, h:mm:ss a'),
     });
     setTimeout(this.startTimer, 500);
   }

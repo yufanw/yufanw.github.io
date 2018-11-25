@@ -7,11 +7,11 @@
 }
 
 .title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 72px;
+    font-family: 'Apple Chancery', cursive;
+    font-weight: 700;
+    font-size: 68px;
     display: inline-block;
-    line-height: 72px;
+    line-height: 90px;
     padding: 0 10px 20px 10px;
 }
 
@@ -23,4 +23,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 768px) {
+    .sub-header {
+        font-size: 14px;
+    }
 }
