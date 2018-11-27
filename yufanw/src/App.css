@@ -1,21 +1,79 @@
 .app {
   background: #eee;
+  color: rgba(0, 0, 0);
   font-family: 'Droid Serif', serif;
+  position: relative;
+}
+
+.app.dark {
+  background: #1b1b1d;
+  color: rgba(238, 238, 238, 0.9);
 }
 
 .app-wrapper {
+  background: inherit;
   padding: 0 10vw;
   display: grid;
-  grid-template-rows: 1fr 100vh 1fr;
+  grid-template-rows: auto auto 100vh auto;
+  position: relative;
+}
+
+.title, .app-header, .app-footer {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  display: inline-block;
+  line-height: 79px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.app-header {
+  background: inherit;
+  z-index: 10;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  height: 50px;
+  padding-bottom: 16px;
 }
 
 .app-body {
-  background: #efefef;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
 }
 
-@media only screen and (max-width: 768px) {
+.articles {
+  width: 70%;
+  padding: 0 15px;
+  border-right: 1px solid #79797957;
+  flex: 0 0 auto;
+}
+
+@media only screen and (max-width:768px) {
+  .app {
+    font-size: 20px;
+  }
   .app-wrapper {
     padding: 0 15px;
   }
-}
 
+  .app-body {
+    flex-direction: column;
+  }
+
+  .articles {
+    padding: 15px 0;
+    border-right: none;
+    border-bottom: 5px double #79797957;
+    width: 100%;
+  }
+
+}

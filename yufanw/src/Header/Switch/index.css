@@ -1,0 +1,63 @@
+
+.switch {
+  display: block;
+  position: relative;
+ 	width: 50px;
+  height: 28px;
+  border-radius: 25px;
+  background: rgba(86, 65, 126, 0.5);
+  -webkit-tap-highlight-color: transparent;
+  border: 1px solid;
+  cursor: pointer;
+  border-collapse: separate;
+  box-shadow:
+    inset 0px 0px 2px,
+    -1px -1px 0,  
+    1px -1px 0,
+    -1px 1px 0,
+    1px 1px 0;
+  -webkit-box-shadow:
+    inset 0px 0px 2px,
+    -1px -1px 0,  
+    1px -1px 0,
+    -1px 1px 0,
+    1px 1px 0;
+  -moz-box-shadow:
+    inset 0px 0px 2px,
+    -1px -1px 0,  
+    1px -1px 0,
+    -1px 1px 0,
+    1px 1px 0;
+  transition: background 0.4s ease-out;
+}
+
+.switch.off {
+  background: #EF810E;
+}
+
+#switch {
+ 	clip: rect(0 0 0 0);
+  position: absolute;
+  visibility: hidden;
+}
+
+.slider {
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 25px;
+  border-collapse: separate;
+  box-shadow: 0px 0px 5px; 
+  -webkit-box-shadow: 0px 0px 5px;
+  -moz-box-shadow: 0px 0px 5px;
+  transition: all 0.4s ease-out;
+}
+
+.slider.off {
+  left: 5px;
+} 
