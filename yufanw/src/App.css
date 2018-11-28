@@ -31,7 +31,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .app.dark {
   background: #1b1b1d;
-  color: rgba(238, 238, 238, 0.9);
+  color: rgba(240, 240, 240, 0.9);
+}
+
+.app.dark .box {
+  background: #5a5a5a9d;
 }
 
 .app-wrapper {
