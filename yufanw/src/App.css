@@ -79,9 +79,9 @@ a:hover > .link {
 }
 
 .app-body {
-
+  justify-content: center;
+  display: flex;
   padding: 16px 0;
-  max-width: 1325px;
 }
 
 .content-wrapper {
@@ -92,7 +92,7 @@ a:hover > .link {
 }
 
 .articles {
-  width: 60%;
+  width: 500px;
   padding: 0 15px;
   border-right: 1px solid #79797957;
   flex: 0 1 auto;
