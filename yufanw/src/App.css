@@ -131,6 +131,10 @@ a:hover > .link {
     height: 70px;
   }
 
+  .app-footer {
+    padding: 30px 10px;
+  }
+
   .content-wrapper {
     flex-direction: column;
     padding: 0;
