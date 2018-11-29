@@ -4,7 +4,8 @@ import moment from 'moment';
 export class Date extends Component {
 
   state = {
-    momentString: moment().format('dddd, MMM Do YYYYY, h:mm:ss a'),
+    dateString: moment().format('dddd, MMM Do YYYY'),
+    timeString: moment().format('hh:mm:ss a'),
   }
   componentDidMount() {
     this.startTimer();
@@ -12,15 +13,19 @@ export class Date extends Component {
 
   startTimer = () => {
     this.setState({
-      momentString: moment().format('dddd, MMM Do YYYY, h:mm:ss a'),
+      dateString: moment().format('dddd, MMM Do YYYY'),
+      timeString: moment().format('hh:mm:ss a'),
     });
-    setTimeout(this.startTimer, 500);
+    setTimeout(this.startTimer, 250);
   }
 
   render() {
     return (
       <div className="date">
-        {this.state.momentString}
+        {this.state.dateString} ||
+        <span className="time">
+          {this.state.timeString}
+        </span>
       </div>
     );
   }
