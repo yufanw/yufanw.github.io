@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
+import ImageBox from './ImageBox';
+import SocialMediaBox from './SocialMediaBox';
 
 class App extends Component {
   state = {
@@ -23,26 +25,19 @@ class App extends Component {
           <div className="app-body">
             <div className="content-wrapper">
               <div className="articles">
-                <div className="image-box">
-                  <h4>Image of the day</h4>
-                  <img src="https://source.unsplash.com/400x400/daily" 
-                    className="responsive-image"
-                    alt="Daily unsplash"/>
-                  <div className="caption"><a href="https://source.unsplash.com/">Image updated daily by <span className="link">unsplash</span></a></div>
-                </div>
+                <ImageBox />
               </div>
-              <div className="social-media-box">
-                <div className="box">
-                  <h4>Contact me:</h4>
-                  <div><a href="https://www.linkedin.com/in/yufan-wang-web">LinkedIn</a></div>
-                  <div><a href="https://github.com/yufanw">Github</a></div>
-                </div>
-              </div>
+              <SocialMediaBox />
             </div>
           </div>
         </div>
         <div className="app-footer"> 
           Copyright 2018 Yufan Wang
+          <div className="note">
+            <a href="https://www.nytimes.com/">
+              Design inspired by <span className="link">The New York Times</span>
+            </a>
+          </div>
         </div>
       </div>
     );

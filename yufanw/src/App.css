@@ -14,6 +14,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 @font-face {
@@ -36,6 +37,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .app.dark .box {
   background: #5a5a5a9d;
+}
+
+.app.dark a:hover > .link {
+  color: rgba(255, 186, 57);
+}
+
+a:hover > .link {
+  color: rgba(148, 113, 48);
 }
 
 .app-wrapper {
@@ -89,49 +98,8 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 1 auto;
 }
 
-.responsive-image {
-  width: 100%;
-  height: auto;
-  max-height: 750px;
-  max-width: 750px;
-}
-
-.caption a {
-  font-size: 0.7em;
-  color: rgba(105, 105, 105, 0.8);
-  text-decoration: none;
-  text-align: right;
-}
-
 .link {
   text-decoration: underline;
-}
-
-.caption a:hover > .link {
-  color: orange;
-}
-
-.social-media-box {
-  padding: 25px 15px;
-  height: 600px;
-  width: 40%;
-}
-
-.box {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 65px;
-  height: 200px;
-  width: 100%;
-  margin: 5px 0;
-  background: #d3d3d3;
-  border: 1px solid #79797957;
-  padding: 15px;
-}
-
-.box div a {
-  color: inherit;
-  opacity: 0.6;
 }
 
 .app-footer {
@@ -141,6 +109,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px;
   height: 40px;
   border-top: 1px solid #79797957;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note a {
+  font-size: 12px;
+  font-style: italic;
 }
 
 @media only screen and (max-width:768px) {
@@ -166,15 +142,4 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 5px double #79797957;
     width: 100%;
   }
-
-  .social-media-box {
-    padding: 15px 0;
-    width: 100%;
-    height: auto;
-  }
-
-  .box {
-    width: 100%;
-  }
-
 }
