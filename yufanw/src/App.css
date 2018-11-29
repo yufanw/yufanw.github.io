@@ -6,6 +6,8 @@
   font-size: 18px;
   min-width: 350px;
   min-height: 100vh;
+  transition: background 0.4s ease-out, color 0.4s ease-out;
+  -webkit-transition: background 0.4s ease-out, color 0.4s ease-out;
 }
 
 * {
@@ -74,8 +76,10 @@ a:hover > .link {
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
-  height: 54px;
-  padding-bottom: 16px;
+  height: 50px;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  border-top: 1.5px solid;
+  padding: 10px 0;
 }
 
 .app-body {
@@ -128,7 +132,7 @@ a:hover > .link {
   }
 
   .app-header {
-    height: 70px;
+    height: 67px;
   }
 
   .app-footer {

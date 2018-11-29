@@ -29,6 +29,7 @@
     -1px 1px 0,
     1px 1px 0;
   transition: background 0.4s ease-out;
+  -webkit-transition: background 0.4s ease-out;
 }
 
 .switch.off {
