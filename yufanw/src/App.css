@@ -102,6 +102,12 @@ a:hover > .link {
   flex: 0 1 auto;
 }
 
+.sidebar {
+  width: 40%;
+  padding: 0 16px;
+  height: auto;
+}
+
 .link {
   text-decoration: underline;
 }
@@ -123,6 +129,10 @@ a:hover > .link {
   font-style: italic;
 }
 
+.note-link {
+  padding: 0 5px;
+}
+
 @media only screen and (max-width:768px) {
   .app {
     font-size: 18px;
@@ -136,7 +146,8 @@ a:hover > .link {
   }
 
   .app-footer {
-    padding: 30px 10px;
+    height: 100px;
+    flex-direction: column;
   }
 
   .content-wrapper {
@@ -149,5 +160,10 @@ a:hover > .link {
     border-right: none;
     border-bottom: 5px double #79797957;
     width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 16px 0;
   }
 }

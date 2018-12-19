@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import ImageBox from './ImageBox';
 import SocialMediaBox from './SocialMediaBox';
+import News from './News';
 
 class App extends Component {
   state = {
@@ -18,21 +19,29 @@ class App extends Component {
     return (
       <div className={darkMode ? 'app dark' : 'app'}>
         <div className="app-wrapper">
-          <div className="title">YUFAN</div>
+          <div className="title">Daily APIs</div>
           <div className="app-header">
             <Header on={this.state.darkMode} onToggle={this.toggleDarkMode} />
           </div>
           <div className="app-body">
             <div className="content-wrapper">
               <div className="articles">
-                <ImageBox />
+                <News />
               </div>
-              <SocialMediaBox />
+              <div className="sidebar">
+                <ImageBox />
+                <SocialMediaBox />
+              </div>
             </div>
           </div>
         </div>
         <div className="app-footer"> 
           Copyright 2018 Yufan Wang
+          <div className="note">
+            <a href="https://newsapi.org//">
+              Powered by <span className="link">News API</span>
+            </a>
+          </div>
           <div className="note">
             <a href="https://www.nytimes.com/">
               Design inspired by <span className="link">The New York Times</span>
