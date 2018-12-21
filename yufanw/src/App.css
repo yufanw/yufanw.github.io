@@ -59,14 +59,15 @@ a:hover > .link {
 }
 
 .title {
-  font-family: 'Trebuchet MS', Arial, sans-serif;
+  font-family: "Georgia, Times", Times New Roman, serif;
   font-weight: 700;
-  font-size: 68px;
+  font-size: 60px;
   display: inline-block;
-  line-height: 79px;
+  line-height: 70px;
   padding: 0 10px;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .app-header {

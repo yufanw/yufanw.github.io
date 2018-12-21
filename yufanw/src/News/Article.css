@@ -11,6 +11,15 @@
   color: inherit;
 }
 
+.article-source {
+  font-size: 0.8em;
+  color: rgba(61, 61, 61, 0.8);
+}
+
+.app.dark .article-source{
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .app.dark a:hover > .article-title  {
   color: rgba(255, 186, 57);
 }

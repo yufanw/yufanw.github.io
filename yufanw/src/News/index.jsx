@@ -9,6 +9,7 @@ import {
 import Article from './Article.jsx';
 
 import './index.css';
+import Loader from '../Loader/index.jsx';
 
 export class News extends Component {
 
@@ -30,8 +31,6 @@ export class News extends Component {
 
     axios.get(url)
     .then(res => {
-
-      console.log(get(res, 'data.articles'));
       this.setState({
         articles: get(res, 'data.articles'),
         isLoading: false,
@@ -48,7 +47,7 @@ export class News extends Component {
   loadArticles = () => {
     if(this.state.isLoading) {
       return (
-        <div>Loading...</div>
+        <Loader />
       );
     }
     return this.renderArticles();
@@ -75,7 +74,7 @@ export class News extends Component {
     } = this.state;
     return (
       <div className="news-comp">
-        <h4>Today's Top Headlines</h4>
+        <h4>Recent Headlines</h4>
         {
           !error && this.loadArticles()
         }

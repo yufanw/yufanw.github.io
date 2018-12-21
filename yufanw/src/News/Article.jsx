@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {get} from 'lodash';
 import './Article.css';
 
 export default class Article extends Component {
@@ -32,6 +33,9 @@ export default class Article extends Component {
           <div
             className="article-title">
             {article.title}</div>
+          <div
+            className="article-source"
+          >Source: {article.author} | {get(article, 'source.name')}</div>
         </a>
       </div>
     );
