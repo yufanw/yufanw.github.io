@@ -78,10 +78,10 @@ a:hover > .link {
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
-  height: 42px;
+  height: 40px;
   border-bottom: 1px solid rgb(187, 187, 187);
   border-top: 1.5px solid;
-  padding: 12px 0;
+  padding: 10px 0;
 }
 
 .app-body {
@@ -92,20 +92,18 @@ a:hover > .link {
 
 .content-wrapper {
   display: flex;
-  justify-content: center;
   position: relative;
-  padding: 16px 6%;
+  justify-content: center;
 }
 
 .articles {
-  width: 500px;
+  max-width: 550px;
   padding: 0 15px;
   border-right: 1px solid #79797957;
-  flex: 0 1 auto;
 }
 
 .sidebar {
-  width: 40%;
+  max-width: 500px;
   padding: 0 16px;
   height: auto;
 }
@@ -135,7 +133,7 @@ a:hover > .link {
   padding: 0 5px;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:568px) {
   .app {
     font-size: 16px;
   }
