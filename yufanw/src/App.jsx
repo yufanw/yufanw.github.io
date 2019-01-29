@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className={darkMode ? 'app dark' : 'app'}>
         <div className="app-wrapper">
-          <div className="title">APIs Daily</div>
+          <div className="title">Daily News</div>
           <div className="app-header">
             <Header on={this.state.darkMode} onToggle={this.toggleDarkMode} />
           </div>

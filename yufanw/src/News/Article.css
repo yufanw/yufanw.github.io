@@ -1,7 +1,7 @@
 .article-comp {
   margin-bottom: 12px;
-  padding: 8px 0;
-  border-bottom: 1px solid #666;
+  padding: 8px 0px;
+  border-bottom: 1px dotted #64646480
 }
 
 .article-title {
