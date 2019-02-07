@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import {
+  get,
+} from 'lodash';
 import './App.css';
 import Header from './Header';
 import ImageBox from './ImageBox';
@@ -31,6 +34,9 @@ class App extends Component {
     this.setModal(true);
   }
   closeModal = () => {
+    this.setState({
+      article: {},
+    });
     this.setModal(false);
     setTimeout(() => {
       window.scrollTo(this.state.scroll.x, this.state.scroll.y)
@@ -38,7 +44,7 @@ class App extends Component {
   }
   setCurrentArticle = (article) => {
     this.getScrollPosition();
-    window.scrollTo(0, 65)
+    window.scrollTo(0, 0)
     this.setState({
       isModalOpen: true,
       article,
@@ -46,8 +52,8 @@ class App extends Component {
   }
   getScrollPosition = () => {
     var doc = document.documentElement;
-    var x = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-    var y = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    var x = get(window, 'pageXOffset', doc.scrollLeft) - get(doc, 'clientLeft', 0);
+    var y = get(window, 'pageYOffset', doc.scrollTop)  - get(doc, 'clientTop', 0);
     console.log(x, y);
     this.setState({
       scroll: {
@@ -76,7 +82,7 @@ class App extends Component {
     return (
       <div className={darkMode ? 'app dark' : 'app'}>
         <div className={isModalOpen ? "app-wrapper full-height" : "app-wrapper"}>
-          <div className="title">Daily News</div>
+          <div className="title">{get(article, 'source.name', 'Daily News')}</div>
           <div className="app-header">
             <Header on={this.state.darkMode} onToggle={this.toggleDarkMode} />
           </div>

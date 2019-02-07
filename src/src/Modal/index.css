@@ -16,6 +16,7 @@
   height: 26px;
   top: 50px;
   left: 0;
+  z-index: 3;
   background: gray;
   color: white;
   border-radius: 50%;
