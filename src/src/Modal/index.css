@@ -37,6 +37,8 @@
   border-top: none;
   border-bottom: none;
   box-sizing: border-box;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (max-width:568px) {
