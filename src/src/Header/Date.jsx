@@ -13,7 +13,7 @@ export class Date extends Component {
 
   startTimer = () => {
     this.setState({
-      dateString: moment().format('dddd, MMM Do YYYY'),
+      dateString: moment().format('ddd, MMM Do YYYY'),
       timeString: moment().format('hh:mm:ss a'),
     });
     setTimeout(this.startTimer, 250);

@@ -4,6 +4,14 @@
   border-bottom: 1px dotted #64646480
 }
 
+.hide {
+  display: none;
+}
+
+.hoverable {
+  cursor: pointer;
+}
+
 .article-title {
   padding-top: 8px;
   font-size: 1em;
@@ -20,10 +28,10 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.app.dark a:hover > .article-title  {
+.app.dark .hoverable:hover > .article-title  {
   color: rgba(255, 186, 57);
 }
 
-a:hover > .article-title  {
+.hoverable:hover > .article-title  {
   color: rgba(148, 113, 48);
 }

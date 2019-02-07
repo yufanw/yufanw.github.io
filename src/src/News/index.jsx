@@ -5,6 +5,7 @@ import {
   get,
   size,
   map,
+  isEmpty,
 } from 'lodash';
 import Article from './Article.jsx';
 
@@ -12,7 +13,6 @@ import './index.css';
 import Loader from '../Loader/index.jsx';
 
 export class News extends Component {
-
   state = {
     articles: null,
     error: null,
@@ -20,7 +20,14 @@ export class News extends Component {
   }
 
   componentDidMount() {
-    this.getTopHeadlines();
+    if(isEmpty(this.props.cachedArticles)) {
+      this.getTopHeadlines();
+    } else {
+      this.setState({
+        articles: this.props.cachedArticles,
+        isLoading: false,
+      })
+    }
   }
 
   getTopHeadlines = () => {
@@ -35,6 +42,7 @@ export class News extends Component {
         articles: get(res, 'data.articles'),
         isLoading: false,
       });
+      this.props.onLoadArticles(get(res, 'data.articles'));
     })
     .catch(error => {
       this.setState({
@@ -57,7 +65,9 @@ export class News extends Component {
     if(size(this.state.articles)) {
       return map(this.state.articles, (article, index) => {
         return (
-          <Article article={article} key={article.publishedAt + index}/>
+          <Article key={article.publishedAt + index}
+            article={article} 
+            onClick={this.props.onClickArticle} />
         )
       })
     }
