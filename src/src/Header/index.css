@@ -1,12 +1,15 @@
 
 
 .header {
-    text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .time {
-    padding: 0 5px;
+    padding: 0 1px;
+    margin-left: 3px;
+    border-left: 1px solid;
+    opacity: 0.7;
+    font-size: 0.9em;
 }

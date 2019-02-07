@@ -14,7 +14,7 @@ export class Date extends Component {
   startTimer = () => {
     this.setState({
       dateString: moment().format('ddd, MMM Do YYYY'),
-      timeString: moment().format('hh:mm:ss a'),
+      timeString: moment().format('hh:mm:ss A'),
     });
     setTimeout(this.startTimer, 250);
   }
@@ -22,7 +22,7 @@ export class Date extends Component {
   render() {
     return (
       <div className="date">
-        {this.state.dateString} ||
+        {this.state.dateString}
         <span className="time">
           {this.state.timeString}
         </span>
