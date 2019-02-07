@@ -1,11 +1,13 @@
 .modal-comp {
   height: 100%;
+  position: relative;
+  max-width: 1000px;
 }
 
 .modal-close-button-container {
   position: absolute;
   left: 5px;
-  top: 5px;
+  top: 25px;
   height: 100%;
 }
 

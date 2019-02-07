@@ -16,12 +16,15 @@
   box-sizing: border-box;
 }
 
-button:focus {outline:0;}
+button {
+  outline:0;
+  border: none;
+  cursor: pointer;
+}
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
 }
 
 @font-face {
@@ -152,6 +155,8 @@ a:hover > .link {
   width: 100%;
   text-align: center;
   z-index: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .content-wrapper {
