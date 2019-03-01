@@ -53,10 +53,6 @@ h1, h2, h3, h4, h5, h6 {
   color: rgba(255, 186, 57);
 }
 
-.app.dark .app-header {
-  box-shadow: 0 3px 4px 0 rgba(116, 129, 141, 0.2);
-}
-
 a:hover > .link {
   color: rgba(148, 113, 48);
 }
