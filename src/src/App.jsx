@@ -125,7 +125,7 @@ class App extends Component {
           </div>
         </div>
         <div className="app-footer"> 
-          Copyright 2018 Yufan Wang
+          Copyright 2019 Yufan Wang
           <div className="note">
             <a href="https://newsapi.org//">
               Powered by <span className="link">News API</span>

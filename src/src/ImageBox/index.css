@@ -12,3 +12,8 @@
   text-decoration: none;
   text-align: right;
 }
+
+.floating {
+  box-shadow: 0 3px 6px 0 rgba(116, 129, 141, 0.1), 0 3px 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 3px 6px 0 rgba(116, 129, 141, 0.1), 0 3px 10px rgba(0, 0, 0, 0.3);
+}

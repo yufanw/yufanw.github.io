@@ -14,10 +14,15 @@ class Header extends Component {
       <div className="header">
         <div className="location">Irvine, CA</div>
         <Date /> 
-        <Switch 
-          onToggle={onToggle}
-          on={on}
-        />
+        <div className="dark-mode-toggle">
+          {on ? 
+            <i className="icon ion-ios-moon"></i> :
+            <i className="icon ion-ios-sunny"></i>}
+          <Switch 
+            onToggle={onToggle}
+            on={on}
+          />
+        </div>
       </div>
     );
   }

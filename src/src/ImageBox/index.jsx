@@ -6,7 +6,7 @@ export default function ImageBox() {
     <div className="image-box">
       <h4>Image of the day</h4>
       <img src="https://source.unsplash.com/400x400/daily" 
-        className="responsive-image"
+        className="responsive-image floating"
         alt="Daily unsplash"/>
       <div className="caption"><a href="https://source.unsplash.com/">Updated daily by <span className="link">unsplash</span></a></div>
     </div>

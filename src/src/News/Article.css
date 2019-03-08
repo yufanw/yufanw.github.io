@@ -10,28 +10,37 @@
 
 .hoverable {
   cursor: pointer;
+  transition: text 0.3s ease-in-out;
 }
 
 .article-title {
   padding-top: 8px;
-  font-size: 1em;
-  line-height: 1.1875rem;
+  line-height: 1em;
   color: inherit;
+  font-size: 0.9em;
 }
 
 .article-source {
   font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: rgba(61, 61, 61, 0.8);
+  max-width: 80%;
 }
 
 .app.dark .article-source{
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .app.dark .hoverable:hover > .article-title  {
-  color: rgba(255, 186, 57);
+  text-decoration: underline;
+  text-decoration-color: #00e2bc;
+  -webkit-text-decoration-color: #00e2bc;
 }
 
 .hoverable:hover > .article-title  {
-  color: rgba(148, 113, 48);
+  text-decoration: underline;
+  text-decoration-color: #22785e;
+  -webkit-text-decoration-color: #22785e;
 }
