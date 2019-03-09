@@ -101,7 +101,7 @@ class App extends Component {
                       <div className="article-author">{article.author}</div>
                       <div className="article-date">{moment(article.publishedAt).format('llll')}</div>
                       <div className="article-content"><div dangerouslySetInnerHTML={{__html: this.setContent()}} /></div>
-                      <div className="article-source"><a href={article.url}><span className="link">Read more...</span></a></div>
+                      <div className="article-link"><a href={article.url}><span className="link">Read more...</span></a></div>
                     </div>
                   </div>
                 }

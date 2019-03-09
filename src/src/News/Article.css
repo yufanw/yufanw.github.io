@@ -20,12 +20,16 @@
   font-size: 0.9em;
 }
 
+.article-link,
 .article-source {
   font-size: 0.8em;
+  color: rgba(61, 61, 61, 0.8);
+}
+
+.article-source {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: rgba(61, 61, 61, 0.8);
   max-width: 80%;
 }
 
