@@ -17,12 +17,10 @@
   padding-top: 8px;
   line-height: 1em;
   color: inherit;
-  font-size: 0.9em;
 }
 
 .article-link,
 .article-source {
-  font-size: 0.8em;
   color: rgba(61, 61, 61, 0.7);
 }
 
@@ -48,4 +46,10 @@
   text-decoration: underline;
   text-decoration-color: #22785e;
   -webkit-text-decoration-color: #22785e;
+}
+
+@media only screen and (max-width:568px) {
+  .article-info {
+    padding: 0 10px;
+  }
 }

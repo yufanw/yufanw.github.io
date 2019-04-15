@@ -21,7 +21,6 @@
 
 .box div a {
   opacity: 0.6;
-  font-size: 15px;
 }
 
 @media only screen and (max-width:568px) {

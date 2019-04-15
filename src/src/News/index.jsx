@@ -84,7 +84,7 @@ export class News extends Component {
     } = this.state;
     return (
       <div className="news-comp">
-        <h4>Recent Headlines</h4>
+        <h4 className="recent-headlines">Recent Headlines</h4>
         {
           !error && this.loadArticles()
         }
