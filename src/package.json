@@ -2,13 +2,14 @@
   "name": "yufanw",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "https://yufanw.github.io/",
+  "homepage": "https://yufanw.github.io/",
   "dependencies": {
     "axios": "0.18.0",
     "lodash": "4.17.11",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "^2.1.8"
+    "moment": "2.24.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",

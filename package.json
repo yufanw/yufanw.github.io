@@ -4,8 +4,5 @@
   "description": "Experimental site",
   "scripts": {},
   "author": "Yufan Wang",
-  "license": "ISC",
-  "dependencies": {
-    "moment": "^2.22.2"
-  }
+  "license": "ISC"
 }
