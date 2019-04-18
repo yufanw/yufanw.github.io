@@ -5,11 +5,15 @@
   max-width: 1000px;
 }
 
+.caption {
+  padding-top: 6px;
+  font-size: 0.9em;
+}
+
 .caption a {
   color: inherit;
   opacity: 0.6;
   text-decoration: none;
-  text-align: right;
 }
 
 .floating {
