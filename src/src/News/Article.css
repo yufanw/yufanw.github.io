@@ -36,16 +36,14 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-.app.dark .hoverable:hover > .article-title  {
+.app.dark .hoverable:hover .article-title  {
+  color: #85dacc;
   text-decoration: underline;
-  text-decoration-color: #00e2bc;
-  -webkit-text-decoration-color: #00e2bc;
 }
 
-.hoverable:hover > .article-title  {
+.hoverable:hover .article-title  {
+  color: #116048;
   text-decoration: underline;
-  text-decoration-color: #22785e;
-  -webkit-text-decoration-color: #22785e;
 }
 
 @media only screen and (max-width:568px) {
