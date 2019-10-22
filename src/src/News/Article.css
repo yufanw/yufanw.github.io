@@ -17,6 +17,8 @@
   padding-top: 8px;
   line-height: 1em;
   color: inherit;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .article-link,
@@ -25,10 +27,12 @@
 }
 
 .article-source {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   max-width: 80%;
+}
+
+.article-content {
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .app.dark .article-link, 
@@ -48,6 +52,10 @@
 
 @media only screen and (max-width:568px) {
   .article-info {
+    padding: 0 10px;
+  }
+  .article-content {
+    font-size: 16px;
     padding: 0 10px;
   }
 }

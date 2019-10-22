@@ -13,11 +13,11 @@ export default class Article extends Component {
       imageError: true,
     });
   }
-
-  setArticle = () => {
-    this.props.onClick(this.props.article);
+  setContent = (article) => {
+    if(article.content) {
+      return article.content.split('[+')[0];
+    }
   }
-
   render() {
     const {
       article,
@@ -27,7 +27,8 @@ export default class Article extends Component {
     } = this.state;
     return (
       <div className={imageError || !article.urlToImage ? "hide" : "article-comp"}>
-        <div className="hoverable" onClick={this.setArticle}>
+        <a className="hoverable"
+          href={article.url}>
           {!imageError && 
             <img src={article.urlToImage}
               onError={this.handleImageError}
@@ -36,10 +37,10 @@ export default class Article extends Component {
           }
           <div className="article-info">
             <div className="article-title">{article.title}</div>
-            <div className="article-source">
-              Source: {article.author} | {get(article, 'source.name')}</div>
+            <div className="article-source">{article.author} ({get(article, 'source.name')})</div>
           </div>
-        </div>
+        </a>
+        <p className="article-content"><span dangerouslySetInnerHTML={{__html: this.setContent(article)}} /></p>
       </div>
     );
   }

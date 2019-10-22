@@ -4,7 +4,6 @@ import './index.css';
 export default function ImageBox() {
   return (
     <div className="image-box">
-      <h4>Image of the day</h4>
       <img src="https://source.unsplash.com/400x400/daily" 
         className="responsive-image floating"
         alt="Daily unsplash"/>

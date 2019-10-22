@@ -66,16 +66,15 @@ export class News extends Component {
       return map(this.state.articles, (article, index) => {
         return (
           <Article key={article.publishedAt + index}
-            article={article} 
-            onClick={this.props.onClickArticle} />
-        )
-      })
+            article={article} />
+        );
+      });
     }
     return (
       <div>
         No news found
       </div>
-    )
+    );
   }
 
   render() {
@@ -84,10 +83,7 @@ export class News extends Component {
     } = this.state;
     return (
       <div className="news-comp">
-        <h4 className="recent-headlines">Recent Headlines</h4>
-        {
-          !error && this.loadArticles()
-        }
+        {!error && this.loadArticles()}
       </div>
     );
   }
