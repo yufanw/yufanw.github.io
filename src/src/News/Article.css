@@ -31,6 +31,7 @@
 }
 
 .article-content {
+  padding-top: 10px;
   font-size: 18px;
   line-height: 1.4;
 }
@@ -57,5 +58,6 @@
   .article-content {
     font-size: 16px;
     padding: 0 10px;
+    line-height: 1.6;
   }
 }
