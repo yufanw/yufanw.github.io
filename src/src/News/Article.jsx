@@ -40,7 +40,7 @@ export default class Article extends Component {
             <div className="article-source">{article.author} ({get(article, 'source.name')})</div>
           </div>
         </a>
-        <p className="article-content"><span dangerouslySetInnerHTML={{__html: this.setContent(article)}} /></p>
+        <div className="article-content"><div dangerouslySetInnerHTML={{__html: this.setContent(article)}} /></div>
       </div>
     );
   }
