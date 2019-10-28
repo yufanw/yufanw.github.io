@@ -17,7 +17,7 @@
   padding-top: 8px;
   line-height: 1em;
   color: inherit;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -27,12 +27,12 @@
 }
 
 .article-source {
-  max-width: 80%;
+  padding: 6px 0;
 }
 
 .article-content {
   padding-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -53,11 +53,11 @@
 
 @media only screen and (max-width:568px) {
   .article-info {
-    padding: 0 10px;
+    padding: 0 16px;
   }
   .article-content {
     font-size: 16px;
-    padding: 0 10px;
+    padding: 0 16px;
     line-height: 1.6;
   }
 }
