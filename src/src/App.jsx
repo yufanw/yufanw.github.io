@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './Header';
-import ImageBox from './ImageBox';
-import News from './News';
+
+import Routes from './Routes';
 class App extends Component {
   state = {
     darkMode: false,
-    articles: [],
   }
   toggleDarkMode = () => {
     this.setState({
       darkMode: !this.state.darkMode,
     });
   }
-
-  cacheArticles = (articles) => {
-    this.setState({
-      articles,
-    })
-  }
   render() {
     const { 
       darkMode,
-      articles,
      } = this.state;
     return (
       <div className={darkMode ? 'app dark' : 'app'}>
@@ -32,18 +24,7 @@ class App extends Component {
             <Header on={this.state.darkMode} onToggle={this.toggleDarkMode} />
           </div>
           <div className="app-body">
-            <div className="content-wrapper">
-              <div className="articles">
-                <News 
-                  cachedArticles={articles}
-                  onLoadArticles={this.cacheArticles} />
-              </div>
-              <div className="sidebar">
-                <div className="sticky-wrapper">
-                  <ImageBox />
-                </div>
-              </div>
-            </div>   
+            <Routes />
           </div>
         </div>
         <div className="app-footer"> 
