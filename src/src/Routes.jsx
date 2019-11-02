@@ -5,6 +5,7 @@ import NewsPage from './views/NewsPage/index';
 import SearchPage from './views/SearchPage/index';
 
 const Routes = () => {
+  console.log('process.env.PUBLIC_URL', process.env.PUBLIC_URL);
   return (
     <Router basename={process.env.PUBLIC_URL + '/'}>
       <Switch>
