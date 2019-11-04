@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toLower } from 'lodash';
 
 import './index.css';
 
@@ -10,16 +11,25 @@ export default function SearchPage() {
     setTerm(inputTerm);
   }
   const renderResults = () => {
-    if (searchTerm !== 'beautiful') {
+    if (toLower(searchTerm.trim()) === 'beautiful') {
       return (
         <div className="results">
-          No results found
+          <img alt="The most beautiful girl in the world"
+            src="https://media.licdn.com/dms/image/C5603AQHvlOE4nArQlg/profile-displayphoto-shrink_800_800/0?e=1577923200&v=beta&t=3wMgfsRz0oZFnzrSD_Phry4lBQE25ciuNWGwmTcYRJk" />
+        </div>
+      )
+    }
+    if (toLower(searchTerm.trim()) === 'whistle') {
+      return (
+        <div className="results">
+          <img alt="Do you know how to whistle?"
+            src="https://imgix.bustle.com/uploads/image/2018/3/22/160d1f60-2f59-4e1c-94eb-80cad754d672-screen-shot-2018-03-22-at-70316-pm.png?w=960&h=540&fit=crop&crop=faces&auto=format&q=70" />
         </div>
       )
     }
     return (
       <div className="results">
-        <img src="https://media.licdn.com/dms/image/C5603AQHvlOE4nArQlg/profile-displayphoto-shrink_800_800/0?e=1577923200&v=beta&t=3wMgfsRz0oZFnzrSD_Phry4lBQE25ciuNWGwmTcYRJk" />
+        No results found
       </div>
     )
   }
