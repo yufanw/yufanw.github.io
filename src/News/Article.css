@@ -1,7 +1,7 @@
 .article-comp {
   margin-bottom: 12px;
   padding: 8px 0px;
-  border-bottom: 1px dotted #64646480
+  border-bottom: 1px dotted #64646480;
 }
 
 .hide {
@@ -35,6 +35,8 @@
   padding-top: 10px;
   font-size: 16px;
   line-height: 1.4;
+  max-width: 100vw;
+  word-wrap: break-word;
 }
 
 .app.dark .article-link, 
