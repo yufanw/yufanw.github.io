@@ -32,18 +32,12 @@ const colors = [
   navy,
 ];
 
-const shadow = keyframes`
+const pop = keyframes`
   0% {
-    -webkit-transform: translateZ(0) translateY(0);
     transform: translateZ(0) translateY(0);
-    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
   100% {
-    -webkit-transform: translateZ(50px) translateY(-12px);
     transform: translateZ(50px) translateY(-12px);
-    -webkit-box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
   }
 `;
 
@@ -97,8 +91,6 @@ const RandomButton = styled.button`
   color: ${beige};
   padding: 8px 12px;
   cursor: pointer;
-  transition: 0.3s box-shadow ease-in-out;
-  box-shadow: 0px 0px 15px -8px ${navy};
   &:hover {
     background: ${blackish};
     box-shadow: 
@@ -116,7 +108,6 @@ const ColorDiv = styled.div`
   width: 50px;
   cursor: pointer;
   border: 1px solid transparent;
-  box-shadow: 0px 0px 28px -8px ${navy};
   ${({color}) => {
     return css`
       background: ${color};
@@ -125,8 +116,10 @@ const ColorDiv = styled.div`
   ${({selected}) => {
     if (selected) {
       return css`
-        border: 1px solid #ffffff;
         cursor: default;
+        box-shadow: 0px 0px 10px -2px ${blue},
+          0px 0px 12px -3px ${blackish},
+          0px 0px 18px -6px ${beige};
         @media only screen and (min-width: 600px) {
           animation: ${bounce} 2s linear infinite;
         }
@@ -134,7 +127,7 @@ const ColorDiv = styled.div`
     }
     return css`
       &:hover {
-        animation: ${shadow} 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: ${pop} 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
       }
     `;
   }}
