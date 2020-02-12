@@ -60,9 +60,9 @@ const bounce = keyframes`
 
 const LayoutDiv = styled.div`
   min-height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
-  overflow: auto;
   ${(props) => {
     return `
       background: ${props.color};
@@ -76,7 +76,7 @@ const CenteredDiv = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 500px;
+  min-height: calc(100vh - 52px);
   background: inherit;
 `;
 
@@ -116,7 +116,7 @@ const ColorDiv = styled.div`
   width: 50px;
   cursor: pointer;
   border: 1px solid transparent;
-  box-shadow: 0px -15px 50px -30px ${navy};
+  box-shadow: 0px 0px 28px -8px ${navy};
   ${({color}) => {
     return css`
       background: ${color};
@@ -143,10 +143,10 @@ const ColorDiv = styled.div`
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
-  position: absolute;
+  position: sticky;
   bottom: 0;
+  left: 0;
   width: 100%;
-  box-shadow: 0px 0px 28px -8px;
 `;
 
 function Layout({children}) {

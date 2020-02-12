@@ -7,7 +7,6 @@ import Routes from './Routes';
 import Layout from './common/Layout';
 
 const AppDiv = styled.div`
-  height: 100%;
   background: #FFF;
   color: ${gray6};
 `;
