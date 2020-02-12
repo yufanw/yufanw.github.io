@@ -1,0 +1,61 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest/globals": true
+  },
+  "extends": [
+      "plugin:react/recommended"
+  ],
+  "settings": {
+      "react": {
+          "createClass": "createReactClass",
+          "pragma": "React",
+          "version": "detect"
+      }
+  },
+  "parserOptions": {
+      "ecmaFeatures": {
+          "experimentalObjectRestSpread": true,
+          "jsx": true
+      },
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react",
+      "jest"
+  ],
+  "rules": {
+      "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+      "comma-dangle": [
+          "error",
+          "always-multiline"
+      ],
+      "indent": [
+          "error",
+          2,
+          { "SwitchCase": 1 }
+      ],
+      "jest/no-disabled-tests": "error",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "error",
+      "jest/valid-expect": "error",
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "semi": [
+          "error",
+          "always"
+      ],
+      "no-console": "error",
+      "no-unused-vars": "error",
+      "quotes": ["error", "single"],
+      "react/prop-types": 0,
+      "react/no-unescaped-entities": 0,
+      "react/no-children-prop": 0
+  }
+}
