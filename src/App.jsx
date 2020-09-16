@@ -4,19 +4,19 @@ import {
   gray6, 
 } from './common/colors';
 import Routes from './Routes';
-import Layout from './common/Layout';
 
 const AppDiv = styled.div`
   background: #FFF;
   color: ${gray6};
+  height: 100%;
+  width: 100%;
+  position: relative;
 `;
 
 const App = () => {
   return (
     <AppDiv>
-      <Layout>
-        <Routes />
-      </Layout>
+      <Routes />
     </AppDiv>
   );
 };

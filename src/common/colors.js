@@ -11,3 +11,4 @@ export const beige = '#FAF3DD';
 export const teal = '#B8F2E6';
 export const blue = '#AED9E0';
 export const navy = '#5e6472';
+export const purple = '#754382';
