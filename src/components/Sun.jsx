@@ -59,9 +59,9 @@ function Sun() {
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const selectColor = () => {
-    let index = Math.floor(Math.random() * palettes.length);
-    while (index === currentIndex) {
-      index = Math.floor(Math.random() * palettes.length);
+    let index = currentIndex + 1;
+    if (index >= palettes.length) {
+      return setCurrentIndex(0);
     }
     setCurrentIndex(index);
   };
