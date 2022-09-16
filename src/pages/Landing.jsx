@@ -33,6 +33,7 @@ const SignatureDiv = styled.div`
   z-index: 10000;
   bottom: 0px;
   right: 0px;
+  letter-spacing: 2px;
   color: ${gray1};
   padding: 5px 5px 2px 5px;
   font-size: 14px;
@@ -62,7 +63,9 @@ function Landing() {
         senior engineer 
       </ContentDiv>
       <SignatureDiv>
-        &#169; YW {year} <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">Contact Me</SocialAnchor>
+        (c) yw {year} -
+        <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">linkedin</SocialAnchor> -
+        <SocialAnchor href="https://www.github.com/yufanw/" rel="noopener noreferrer nofollow">github</SocialAnchor>
       </SignatureDiv>
     </RelativeDiv>
   );
