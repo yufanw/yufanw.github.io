@@ -1,131 +1,70 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import {
-  gray0,
-  coral,
-  beige,
-  teal,
-  blue,
-  purple,
-} from '../common/colors';
+import styled from 'styled-components';
+import { coral, gray1 } from '../common/colors';
+import Sun from '../components/Sun';
 
-
-const bounce = keyframes`
-  0%   { transform: translateY(0) }
-  50%  { transform: translateY(-16px) }
-  100% { transform: translateY(0) }
-`;
-
-const WrapperDiv = styled.div`
-  min-height: 100vh;
+const RelativeDiv = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
 `;
 
-const CenteredDiv = styled.div`
-  height: 100%
-  display: flex;
-  flex-direction: column;
-`;
-
-const LandDiv = styled.div`
-  min-height: 60vh;
-  background: ${beige};
-  background: linear-gradient(0deg, ${beige} 0%, ${coral} 55%, ${purple} 88%);
-`;
-
-const WaterDiv = styled.div`
-  height: 40%;
-  min-height: 40vh;
-  background: ${blue};
-  width: 100%;
-  z-index: 100;
+const ArtDiv = styled.div`
+  height: 500px;
+  max-width: 700px;
   position: relative;
+  padding: 20px;
 `;
 
-const BouncingWaterDiv = styled.div`
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: ${coral};
-  animation: ${bounce} 8s linear infinite;
+const NameH1 = styled.h1`
+  font-size: 32px;
+  letter-spacing: 8px;
+  padding: 20px;
+  margin: 0;
 `;
 
-const WaterColorDiv = styled.div`
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: ${teal};
-  background: linear-gradient(0, ${purple} 0%, ${blue} 30%, ${beige} 56%, ${coral} 88%);
-`;
-
-const SunDiv = styled.div`
-  background: #ff7583;
-  width: 160px;
-  height: 160px:
-  min-width: 160px;
-  min-height: 160px;
-  border-radius: 50%;
-`;
-
-const SunPositionDiv = styled.div`
-  height: 160px;
-  position: absolute;
-  top: 45%;
-  left: 28%;
-  transition: all ease-in-out 1s;
-  :hover {
-    top: 40%;
-    transform: scale(0.9);
-  }
+const ContentDiv = styled.div`
+  padding: 0 20px;
+  margin: 0;
 `;
 
 const SignatureDiv = styled.div`
   position: fixed;
   z-index: 10000;
-  bottom: 5px;
-  right: 5px;
-  font-size: 12px;
-  color: ${gray0};
-`;
-
-const SigSpan = styled.span`
-  font-style: italic;
-  font-size: 8px;
+  bottom: 0px;
+  right: 0px;
+  color: ${gray1};
+  padding: 5px 5px 2px 5px;
+  font-size: 14px;
 `;
 
 const SocialAnchor = styled.a`
-  color: ${gray0};
+  color: ${gray1};
+  text-decoration: none;
+  font-size: 12px;
   :hover {
-    color: ${teal};
+    color: ${coral};
+    text-decoration: underline;
   }
 `;
 
 function Landing() {
+  const year = new Date().getFullYear();
   return (
-    <WrapperDiv>
-      <CenteredDiv>
-        <LandDiv>
-          <SunPositionDiv>
-            <SunDiv></SunDiv>
-          </SunPositionDiv>
-        </LandDiv>
-        <WaterDiv>
-          <BouncingWaterDiv>
-          </BouncingWaterDiv>
-          <WaterColorDiv>
-          </WaterColorDiv>
-        </WaterDiv>
-      </CenteredDiv>
+    <RelativeDiv>
+      <ArtDiv>
+        <Sun />
+      </ArtDiv>
+      <NameH1>
+        yufan wang
+      </NameH1>
+      <ContentDiv>
+        senior engineer 
+      </ContentDiv>
       <SignatureDiv>
-        <SigSpan>&hearts;JMB | CSS Only</SigSpan> &#169;2020 <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">Yufan W</SocialAnchor>
+        &#169; YW {year} <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">Contact Me</SocialAnchor>
       </SignatureDiv>
-    </WrapperDiv>
+    </RelativeDiv>
   );
 };
 
