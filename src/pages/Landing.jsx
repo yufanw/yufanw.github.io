@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blackish, coral, gray1, gray6, purple } from '../common/colors';
+import { blackish, coral, gray1, gray6 } from '../common/colors';
 import Sun from '../components/Sun';
 
 const RelativeDiv = styled.div`
@@ -12,7 +12,7 @@ const ArtDiv = styled.div`
   height: 500px;
   max-width: 700px;
   position: relative;
-  border: 10px groove ${purple};
+  border: 10px groove ${gray6};
 `;
 
 const H1 = styled.h1`
