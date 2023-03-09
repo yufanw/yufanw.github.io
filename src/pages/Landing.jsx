@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { coral, gray1 } from '../common/colors';
+import { blackish, coral, gray1 } from '../common/colors';
 import Sun from '../components/Sun';
 
 const RelativeDiv = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
+  background: ${blackish};
 `;
 
 const ArtDiv = styled.div`
@@ -16,7 +17,7 @@ const ArtDiv = styled.div`
   padding: 20px;
 `;
 
-const NameH1 = styled.h1`
+const H1 = styled.h1`
   font-size: 32px;
   letter-spacing: 8px;
   padding: 20px;
@@ -30,13 +31,13 @@ const ContentDiv = styled.div`
 
 const SignatureDiv = styled.div`
   position: fixed;
-  z-index: 10000;
-  bottom: 0px;
-  right: 0px;
+  right: 0;
+  bottom: 0;
   letter-spacing: 2px;
   color: ${gray1};
-  padding: 5px 5px 2px 5px;
   font-size: 14px;
+  background: ${blackish};
+  opacity: 0.8;
 `;
 
 const SocialAnchor = styled.a`
@@ -49,6 +50,20 @@ const SocialAnchor = styled.a`
   }
 `;
 
+const LinkAnchor = styled.a`
+  color: ${coral};
+  text-decoration: none;
+`;
+
+const DividerDiv = styled.div`
+  margin-bottom: 20px;
+  height: 1px;
+`;
+
+const BottomDiv = styled.div`
+  padding-bottom: 100px;
+`;
+
 function Landing() {
   const year = new Date().getFullYear();
   return (
@@ -56,15 +71,47 @@ function Landing() {
       <ArtDiv>
         <Sun />
       </ArtDiv>
-      <NameH1>
-        yufan wang
-      </NameH1>
-      <ContentDiv>
-        senior engineer 
-      </ContentDiv>
+      <H1>
+        Yufan Wang
+      </H1>
+      <BottomDiv>
+        <ContentDiv>
+          I build web applications, 
+          mostly in React and Typescript 
+        </ContentDiv>
+        <DividerDiv />
+        <DividerDiv />
+        <ContentDiv>
+          Software I've worked on:
+        </ContentDiv>
+        <DividerDiv />
+        <ContentDiv>
+          <LinkAnchor href="https://subject.com" rel="noopener noreferrer nofollow" target="_blank">
+            * Subject
+          </LinkAnchor>
+          {' - '}
+          📚 Accredited LMS for high schools and districts to accelerate learning
+        </ContentDiv>
+        <ContentDiv>
+          <LinkAnchor href="https://buildops.com" rel="noopener noreferrer nofollow" target="_blank">
+            * BuildOps
+          </LinkAnchor>
+          {' - '}
+          📊 Cloud-based Operational Platform for commercial contractors
+        </ContentDiv>
+        <ContentDiv>
+          <LinkAnchor href="https://gocious.com" rel="noopener noreferrer nofollow" target="_blank">
+            * Gocious
+          </LinkAnchor>
+          {' - '}
+           🛠 Product Roadmap Management for manufacturers
+        </ContentDiv>
+      </BottomDiv>
       <SignatureDiv>
-        (c) yw {year} -
-        <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">linkedin</SocialAnchor> -
+        (c) yw {year}
+        {' -'}
+        <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">linkedin</SocialAnchor>
+        {' -'}
         <SocialAnchor href="https://www.github.com/yufanw/" rel="noopener noreferrer nofollow">github</SocialAnchor>
       </SignatureDiv>
     </RelativeDiv>

@@ -7,13 +7,11 @@ import GlobalFonts from './fonts/fonts';
 import Routes from './Routes';
 
 const AppDiv = styled.div`
-  background: #FFF;
   color: ${gray1};
-  height: 100vh;
-  width: 100%;
-  position: relative;
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
+  min-height: 100vh;
+  height: 100%;
   background: ${blackish};
 `;
 

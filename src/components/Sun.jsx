@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { blue, palettes } from '../common/colors';
 
@@ -7,11 +7,13 @@ const CenteredDiv = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  filter: brightness(60%);
 `;
 
 const LandDiv = styled.div`
   height: 60%;
-  background: ${({colors}) => `linear-gradient(0, ${colors.midLight} 0%, ${colors.mid} 50%, ${colors.dark} 88%)`};
+  background: ${({colors}) => colors.midLight};
+  transition: background 2s ease-in-out;
 `;
 
 const WaterDiv = styled.div`
@@ -22,13 +24,6 @@ const WaterDiv = styled.div`
   position: relative;
 `;
 
-const BouncingWaterDiv = styled.div`
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  height: 100%;
-  width: 100%;
-`;
 
 const WaterColorDiv = styled.div`
   position: absolute;
@@ -36,8 +31,10 @@ const WaterColorDiv = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background: ${({colors}) => `linear-gradient(0, ${colors.dark} 0%, ${colors.mid} 30%, ${colors.midLight} 56%, ${colors.light} 78%)`};
+  background: ${blue};
+  transition: background 1s ease-in-out;
 `;
+
 
 const SunDiv = styled.div`
   background: #FA9494;
@@ -56,7 +53,14 @@ const SunPositionDiv = styled.div`
 `;
 
 function Sun() {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      selectColor();
+    }, 2000);
+    return () => clearInterval(interval);
+  })
 
   const selectColor = () => {
     let index = currentIndex + 1;
@@ -74,8 +78,6 @@ function Sun() {
         </SunPositionDiv>
       </LandDiv>
       <WaterDiv>
-        <BouncingWaterDiv>
-        </BouncingWaterDiv>
         <WaterColorDiv colors={palettes[currentIndex]}>
         </WaterColorDiv>
       </WaterDiv>
