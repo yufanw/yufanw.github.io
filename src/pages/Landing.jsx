@@ -1,32 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blackish, coral, gray1 } from '../common/colors';
+import { blackish, coral, gray1, gray6, purple } from '../common/colors';
 import Sun from '../components/Sun';
 
 const RelativeDiv = styled.div`
-  height: 100%;
-  width: 100%;
   position: relative;
-  background: ${blackish};
+  padding: 20px;
 `;
 
 const ArtDiv = styled.div`
   height: 500px;
   max-width: 700px;
   position: relative;
-  padding: 20px;
+  border: 10px groove ${purple};
 `;
 
 const H1 = styled.h1`
-  font-size: 32px;
-  letter-spacing: 8px;
-  padding: 20px;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin: 0;
+`;
+
+const H4 = styled.h4`
+  font-size: 24px;
+  font-weight: 400;
   margin: 0;
 `;
 
 const ContentDiv = styled.div`
-  padding: 0 20px;
   margin: 0;
+`;
+
+const DividerLine = styled.div`
+  border-bottom: 5px groove ${gray6};
 `;
 
 const SignatureDiv = styled.div`
@@ -56,13 +62,15 @@ const LinkAnchor = styled.a`
 `;
 
 const DividerDiv = styled.div`
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   height: 1px;
 `;
 
-const BottomDiv = styled.div`
-  padding-bottom: 100px;
+const TallDividerDiv = styled.div`
+  padding-bottom: 60px;
+  height: 1px;
 `;
+
 
 function Landing() {
   const year = new Date().getFullYear();
@@ -74,39 +82,38 @@ function Landing() {
       <H1>
         Yufan Wang
       </H1>
-      <BottomDiv>
-        <ContentDiv>
-          I build web applications, 
-          mostly in React and Typescript 
-        </ContentDiv>
-        <DividerDiv />
-        <DividerDiv />
-        <ContentDiv>
-          Software I've worked on:
-        </ContentDiv>
-        <DividerDiv />
-        <ContentDiv>
-          <LinkAnchor href="https://subject.com" rel="noopener noreferrer nofollow" target="_blank">
-            * Subject
-          </LinkAnchor>
-          {' - '}
-          📚 Accredited LMS for high schools and districts to accelerate learning
-        </ContentDiv>
-        <ContentDiv>
-          <LinkAnchor href="https://buildops.com" rel="noopener noreferrer nofollow" target="_blank">
-            * BuildOps
-          </LinkAnchor>
-          {' - '}
-          📊 Cloud-based Operational Platform for commercial contractors
-        </ContentDiv>
-        <ContentDiv>
-          <LinkAnchor href="https://gocious.com" rel="noopener noreferrer nofollow" target="_blank">
-            * Gocious
-          </LinkAnchor>
-          {' - '}
-           🛠 Product Roadmap Management for manufacturers
-        </ContentDiv>
-      </BottomDiv>
+      <H4>
+        I build web applications, 
+        mostly in React and Typescript 
+        <DividerLine />
+      </H4>
+      <TallDividerDiv />
+      <ContentDiv>
+        Software I've worked on:
+      </ContentDiv>
+      <DividerDiv />
+      <ContentDiv>
+        <LinkAnchor href="https://subject.com" rel="noopener noreferrer nofollow" target="_blank">
+          * Subject
+        </LinkAnchor>
+        {' - '}
+        📚 Accredited LMS for high schools and districts to accelerate learning
+      </ContentDiv>
+      <ContentDiv>
+        <LinkAnchor href="https://buildops.com" rel="noopener noreferrer nofollow" target="_blank">
+          * BuildOps
+        </LinkAnchor>
+        {' - '}
+        📊 Cloud-based Operational Platform for commercial contractors
+      </ContentDiv>
+      <ContentDiv>
+        <LinkAnchor href="https://gocious.com" rel="noopener noreferrer nofollow" target="_blank">
+          * Gocious
+        </LinkAnchor>
+        {' - '}
+          🛠 Product Roadmap Management for manufacturers
+      </ContentDiv>
+      <TallDividerDiv />
       <SignatureDiv>
         (c) yw {year}
         {' -'}
