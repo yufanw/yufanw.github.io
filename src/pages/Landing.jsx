@@ -16,7 +16,6 @@ import gociousImage from "../assets/gocious.png";
 const RelativeDiv = styled.div`
   position: relative;
   padding: 20px;
-  box-sizing: border-box;
   max-width: 1400px;
   margin: 0 auto;
 `;
