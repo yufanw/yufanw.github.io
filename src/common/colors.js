@@ -1,4 +1,5 @@
 export const blackish = 'rgb(26, 27, 31)';
+export const gray7 = '#232526';
 export const gray6 = '#373D3F';
 export const gray5 = '#555F61';
 export const gray4 = '#707C80';
@@ -8,9 +9,9 @@ export const gray1 = '#C1C7C9';
 export const gray0 = '#F2F3F4';
 export const coral = '#F67280';
 export const beige = '#C06C84';
-export const teal = '#B8F2E6';
+export const teal = '#4ea2e9';
 export const blue = '#355C7D';
-export const navy = '#5e6472';
+export const navy = '#082449';
 export const purple = '#6C5B7B';
 
 export const palettes = [

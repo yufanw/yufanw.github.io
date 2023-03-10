@@ -1,30 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
-import { blackish, coral, gray1, gray6 } from '../common/colors';
-import Sun from '../components/Sun';
+import React from "react";
+import styled from "styled-components";
+import {
+  blackish,
+  blue,
+  coral,
+  gray0,
+  gray1,
+  gray6,
+} from "../common/colors";
+import Card from "../components/Card";
+import Sun from "../components/Sun";
+import subjectImage from "../assets/subject.png";
+import buildopsImage from "../assets/buildops.png";
+import gociousImage from "../assets/gocious.png";
 
 const RelativeDiv = styled.div`
   position: relative;
   padding: 20px;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
 `;
 
 const ArtDiv = styled.div`
-  height: 500px;
-  max-width: 700px;
+  height: 600px;
   position: relative;
-  border: 10px groove ${gray6};
+  box-shadow: ${blackish} 0px 2px 4px 0px, ${blackish} 0px 2px 16px 0px;
+  @media (max-width: 768px) {
+    height: 640px;
+  }
 `;
 
 const H1 = styled.h1`
-  font-size: 36px;
-  letter-spacing: 2px;
+  font-size: 38px;
   margin: 0;
+  padding: 10px 0;
+`;
+
+const H2 = styled.h2`
+  font-size: 26px;
+  margin: 0;
+  padding: 8px 0;
 `;
 
 const H4 = styled.h4`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   margin: 0;
+  padding: 6px 0;
 `;
 
 const ContentDiv = styled.div`
@@ -32,7 +55,7 @@ const ContentDiv = styled.div`
 `;
 
 const DividerLine = styled.div`
-  border-bottom: 5px groove ${gray6};
+  border-bottom: 1px solid ${gray6};
 `;
 
 const SignatureDiv = styled.div`
@@ -40,25 +63,43 @@ const SignatureDiv = styled.div`
   right: 0;
   bottom: 0;
   letter-spacing: 2px;
+  padding: 5px 10px;
   color: ${gray1};
   font-size: 14px;
-  background: ${blackish};
   opacity: 0.8;
 `;
 
 const SocialAnchor = styled.a`
   color: ${gray1};
   text-decoration: none;
-  font-size: 12px;
   :hover {
     color: ${coral};
     text-decoration: underline;
   }
-`;
-
-const LinkAnchor = styled.a`
-  color: ${coral};
-  text-decoration: none;
+  /* Style all font awesome icons */
+  &.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    &.fa-github {
+      background: ${blackish};
+      color: ${gray0};
+    }
+    &.fa-linkedin {
+      background: ${blue};
+      color: ${gray0};
+    }
+    &.fa-envelope {
+      background: ${gray1};
+      color: ${blackish};
+    }
+    :hover {
+      opacity: 0.8;
+    }
+  }
 `;
 
 const DividerDiv = styled.div`
@@ -67,10 +108,27 @@ const DividerDiv = styled.div`
 `;
 
 const TallDividerDiv = styled.div`
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   height: 1px;
 `;
 
+const GridDiv = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 20px;
+`;
+
+const InlineDiv = styled.div`
+  display: inline-flex;
+  gap: 10px;
+`;
+
+const PositionedDiv = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 20px;
+`;
 
 function Landing() {
   const year = new Date().getFullYear();
@@ -78,51 +136,62 @@ function Landing() {
     <RelativeDiv>
       <ArtDiv>
         <Sun />
+        <PositionedDiv>
+          <H1>Yufan Wang</H1>
+          <H4>I build web applications, mostly in React and Typescript</H4>
+          <InlineDiv>
+            <SocialAnchor
+              href="https://www.github.com/yufanw/"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              className="fa fa-github"
+            />
+            <SocialAnchor
+              href="https://www.linkedin.com/in/yufan-wang-web/"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              className="fa fa-linkedin"
+            />
+            <SocialAnchor
+              href="mailto:yufansmail@gmail.com"
+              rel="noopener noreferrer nofollow"
+              target="_blank"
+              className="fa fa-envelope"
+            />
+          </InlineDiv>
+          <TallDividerDiv />
+        </PositionedDiv>
       </ArtDiv>
-      <H1>
-        Yufan Wang
-      </H1>
-      <H4>
-        I build web applications, 
-        mostly in React and Typescript 
-        <DividerLine />
-      </H4>
       <TallDividerDiv />
-      <ContentDiv>
-        Software I've worked on:
-      </ContentDiv>
+      <DividerLine />
+      <TallDividerDiv />
       <DividerDiv />
-      <ContentDiv>
-        <LinkAnchor href="https://subject.com" rel="noopener noreferrer nofollow" target="_blank">
-          * Subject
-        </LinkAnchor>
-        {' - '}
-        📚 Accredited LMS for high schools and districts to accelerate learning
-      </ContentDiv>
-      <ContentDiv>
-        <LinkAnchor href="https://buildops.com" rel="noopener noreferrer nofollow" target="_blank">
-          * BuildOps
-        </LinkAnchor>
-        {' - '}
-        📊 Cloud-based Operational Platform for commercial contractors
-      </ContentDiv>
-      <ContentDiv>
-        <LinkAnchor href="https://gocious.com" rel="noopener noreferrer nofollow" target="_blank">
-          * Gocious
-        </LinkAnchor>
-        {' - '}
-          🛠 Product Roadmap Management for manufacturers
-      </ContentDiv>
+      <GridDiv>
+        <ContentDiv>
+          <Card
+            link="https://buildops.com"
+            title="BuildOps"
+            image={buildopsImage}
+          >
+            Cloud-based Operational Platform for commercial contractors
+          </Card>
+        </ContentDiv>
+        <ContentDiv>
+          <Card link="https://subject.com" title="Subject" image={subjectImage}>
+            Accredited LMS for high schools and districts to accelerate learning
+          </Card>
+        </ContentDiv>
+        <ContentDiv>
+          <Card link="https://gocious.com" title="Gocious" image={gociousImage}>
+            Product Roadmap Management for manufacturers
+          </Card>
+        </ContentDiv>
+      </GridDiv>
       <TallDividerDiv />
-      <SignatureDiv>
-        (c) yw {year}
-        {' -'}
-        <SocialAnchor href="https://www.linkedin.com/in/yufan-wang-web/" rel="noopener noreferrer nofollow">linkedin</SocialAnchor>
-        {' -'}
-        <SocialAnchor href="https://www.github.com/yufanw/" rel="noopener noreferrer nofollow">github</SocialAnchor>
-      </SignatureDiv>
+      <TallDividerDiv />
+      <SignatureDiv>(c) yufan wang {year}</SignatureDiv>
     </RelativeDiv>
   );
-};
+}
 
 export default Landing;
