@@ -8,7 +8,7 @@ import {
 } from '../common/colors';
 
 const CardDiv = styled.div`
-  background: linear-gradient(to right bottom, ${blackish}, 92% ${gray6});
+  background: linear-gradient(to right bottom, ${blackish}, ${gray6} 92%);
   max-width: 980px;
   display: flex;
   flex-flow: column;
