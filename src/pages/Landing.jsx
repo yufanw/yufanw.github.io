@@ -37,12 +37,6 @@ const H1 = styled.h1`
   padding: 10px 0;
 `;
 
-const H2 = styled.h2`
-  font-size: 26px;
-  margin: 0;
-  padding: 8px 0;
-`;
-
 const H4 = styled.h4`
   font-size: 22px;
   font-weight: 400;
