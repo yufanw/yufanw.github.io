@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   blackish,
+  blue,
   gray0,
   gray1,
-  blue,
 } from '../common/colors';
 
 const CardDiv = styled.div`
