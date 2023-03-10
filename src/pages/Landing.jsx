@@ -32,7 +32,7 @@ const ArtDiv = styled.div`
 const H1 = styled.h1`
   font-size: 38px;
   margin: 0;
-  padding: 10px 0;
+  padding: 6px 0;
 `;
 
 const H4 = styled.h4`
