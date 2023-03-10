@@ -24,7 +24,6 @@
       "sourceType": "module"
   },
   "plugins": [
-      "react",
       "jest"
   ],
   "rules": {
