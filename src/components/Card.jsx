@@ -5,10 +5,11 @@ import {
   gray0,
   gray1,
   gray7,
+  navy,
 } from '../common/colors';
 
 const CardDiv = styled.div`
-  background: linear-gradient(to right bottom, ${blackish}, ${gray7});
+  background: linear-gradient(to right bottom, ${navy}, ${gray7});
   max-width: 980px;
   display: flex;
   flex-flow: column;
