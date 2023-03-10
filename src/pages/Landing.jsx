@@ -1,17 +1,17 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 import {
   blackish,
   blue,
   gray0,
   gray1,
   gray6,
-} from "../common/colors";
-import Card from "../components/Card";
-import Sun from "../components/Sun";
-import subjectImage from "../assets/subject.png";
-import buildopsImage from "../assets/buildops.png";
-import gociousImage from "../assets/gocious.png";
+} from '../common/colors';
+import Card from '../components/Card';
+import Sun from '../components/Sun';
+import subjectImage from '../assets/subject.png';
+import buildopsImage from '../assets/buildops.png';
+import gociousImage from '../assets/gocious.png';
 
 const RelativeDiv = styled.div`
   position: relative;

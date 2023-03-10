@@ -56,7 +56,7 @@ function Sun() {
       selectColor();
     }, 2000);
     return () => clearInterval(interval);
-  })
+  });
 
   const selectColor = () => {
     let index = currentIndex + 1;

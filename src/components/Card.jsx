@@ -52,14 +52,14 @@ const CardImg = styled.img`
 const CardContentDiv = styled.div`
   margin: 10px 20px;
   color: ${gray1};
-`
+`;
 
 const RightAlignDiv = styled.div`
   right: 0;
   bottom: 0;
   margin: 10px;
   text-align: right;
-`
+`;
 
 const H2 = styled.h2`
   font-size: 26px;
@@ -89,4 +89,4 @@ const Card = ({ link, title, image, children }) => (
   </CardDiv>
 );
 
-export default Card
+export default Card;
