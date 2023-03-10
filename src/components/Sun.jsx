@@ -6,12 +6,12 @@ const CenteredDiv = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  filter: brightness(70%)
 `;
 
 const LandDiv = styled.div`
   height: 60%;
-  background: ${({colors}) => colors.midLight};
+  background: ${({colors}) => colors.mid};
   transition: background 1s ease-in-out;
 `;
 
@@ -22,15 +22,14 @@ const WaterDiv = styled.div`
   position: relative;
 `;
 
-
 const WaterColorDiv = styled.div`
   position: absolute;
   left: 0;
   height: 100%;
   width: 100%;
   background: ${blue};
-  background: linear-gradient(178deg, ${teal} 0%, ${blue} 41%, ${navy} 92%);`;
-
+  background: linear-gradient(178deg, ${teal} 0%, ${blue} 41%, ${navy} 92%);
+`;
 
 const SunDiv = styled.div`
   background: ${({colors}) => colors.light};

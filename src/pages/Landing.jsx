@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {
   blackish,
   blue,
-  coral,
   gray0,
   gray1,
   gray6,
@@ -66,10 +65,6 @@ const SignatureDiv = styled.div`
 const SocialAnchor = styled.a`
   color: ${gray1};
   text-decoration: none;
-  :hover {
-    color: ${coral};
-    text-decoration: underline;
-  }
   /* Style all font awesome icons */
   &.fa {
     padding: 20px;
@@ -78,6 +73,7 @@ const SocialAnchor = styled.a`
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    transition: 0.3s ease-in;
     &.fa-github {
       background: ${blackish};
       color: ${gray0};
@@ -87,11 +83,11 @@ const SocialAnchor = styled.a`
       color: ${gray0};
     }
     &.fa-envelope {
-      background: ${gray1};
-      color: ${blackish};
+      background: ${gray6};
+      color: ${gray0};
     }
     :hover {
-      opacity: 0.8;
+      border-radius: 5px;
     }
   }
 `;

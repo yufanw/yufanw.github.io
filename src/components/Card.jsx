@@ -15,7 +15,7 @@ const CardDiv = styled.div`
 
 const CardAnchor = styled.a`
   --b: 1px;   /* border thickness */
-  --s: .4em; /* size of the corner */
+  --s: .3em; /* size of the corner */
   --color: ${gray1}
 
   padding: calc(.2em + var(--s)) calc(.5em + var(--s));
@@ -35,7 +35,7 @@ const CardAnchor = styled.a`
   :focus-visible {
     --_p: 0px;
     outline-color: var(--color);
-    outline-offset: .05em;
+    outline-offset: .01em;
   }
   :active {
     background: var(--color);
@@ -82,7 +82,7 @@ const Card = ({ link, title, image, children }) => (
     <RightAlignDiv>
       <CardContentDiv>
         <CardAnchor href={link} rel="noopener noreferrer nofollow" target="_blank">
-          View
+          view
         </CardAnchor>
       </CardContentDiv>
     </RightAlignDiv>
