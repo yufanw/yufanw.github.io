@@ -4,11 +4,11 @@ import {
   blackish,
   gray0,
   gray1,
-  gray6,
+  gray7,
 } from '../common/colors';
 
 const CardDiv = styled.div`
-  background: linear-gradient(to right bottom, ${blackish}, ${gray6});
+  background: linear-gradient(to right bottom, ${blackish}, ${gray7});
   max-width: 980px;
   display: flex;
   flex-flow: column;
