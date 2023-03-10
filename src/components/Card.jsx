@@ -4,9 +4,11 @@ import {
   blackish,
   gray0,
   gray1,
+  gray6,
 } from '../common/colors';
 
 const CardDiv = styled.div`
+  background: ${gray6};
   max-width: 980px;
   display: flex;
   flex-flow: column;
