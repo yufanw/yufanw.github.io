@@ -25,7 +25,7 @@ const ArtDiv = styled.div`
   position: relative;
   box-shadow: ${blackish} 0px 2px 4px 0px, ${blackish} 0px 2px 16px 0px;
   @media (max-width: 768px) {
-    height: 660px;
+    height: 680px;
   }
 `;
 
