@@ -20,9 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/404.html",
-    "lint": "eslint --config .eslintrc.json src/**/*.js src/**/*.jsx",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "lint": "eslint --config .eslintrc.json src/**/*.js src/**/*.jsx"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

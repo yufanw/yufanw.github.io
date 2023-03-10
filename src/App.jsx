@@ -13,6 +13,8 @@ const AppDiv = styled.div`
   min-height: 100vh;
   height: 100%;
   background: ${gray7};
+  min-width: 360px;
+  overflow: auto;
 `;
 
 const App = () => {
