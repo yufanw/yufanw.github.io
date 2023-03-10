@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import {
   blackish,
-  blue,
   gray0,
   gray1,
+  gray6,
 } from '../common/colors';
 
 const CardDiv = styled.div`
-  background: linear-gradient(to right bottom, ${blackish}, ${blue});
+  background: linear-gradient(to right bottom, ${blackish}, 92% ${gray6});
   max-width: 980px;
   display: flex;
   flex-flow: column;
