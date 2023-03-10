@@ -116,7 +116,7 @@ const PositionedDiv = styled.div`
   position: absolute;
   left: 0;
   bottom: 0;
-  padding-left: 20px;
+  padding: 0 20px;
 `;
 
 function Landing() {
