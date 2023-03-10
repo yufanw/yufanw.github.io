@@ -128,6 +128,7 @@ function Landing() {
         <PositionedDiv>
           <H1>Yufan Wang</H1>
           <H4>I build web applications, mostly in React and Typescript</H4>
+          <DividerDiv />
           <InlineDiv>
             <SocialAnchor
               href="https://www.github.com/yufanw/"
