@@ -8,23 +8,9 @@ import vectorsImage from '../assets/vectors.jpg';
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
-    scale: 0.8;
-  }
-  25% {
-    transform: rotate(90deg);
-    scale: 1.4;
-  }
-  50% {
-    transform: rotate(180deg);
-    scale: 0.8;
-  }
-  75% {
-    transform: rotate(270deg);
-    scale: 1.4;
   }
   100% {
     transform: rotate(360deg);
-    scale: 0.8;
   }
 `;
 
