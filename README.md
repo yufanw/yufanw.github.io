@@ -1,9 +1,15 @@
 # yufanw.github.io
 
-Personal index website made using React.
+Author: Yufan Wang
 
-Page includes links to professional social media accounts.
+## GITHUB PAGE
+
+"Portfolio" website, with links to current and past work experience
+
+Not a very serious site, just a place where I try out different technologies and designs
 
 ## LICENSE
 
 UNLICENSED
+
+
