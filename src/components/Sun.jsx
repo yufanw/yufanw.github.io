@@ -22,14 +22,16 @@ const CenteredDiv = styled.div`
 
 const SkyDiv = styled.div`
   height: 60%;
-  width: 100%;
   position: relative;
   overflow: hidden;
   transition: background 2s ease-in-out;
   background-attachment: fixed;
   background-image: url(${starsImage});
   background-color: ${({colors}) => colors.dark};
-  background-blend-mode: screen;
+  background-blend-mode: lighten;
+  @media (max-width: 768px) {
+    height: 55%;
+  }
 `;
 
 const WaterDiv = styled.div`
@@ -37,7 +39,7 @@ const WaterDiv = styled.div`
   background: ${blue};
   position: relative;
   @media (max-width: 768px) {
-    height: 50%;
+    height: 45%;
   }
 `;
 
