@@ -19,7 +19,7 @@ const changeColorDark = keyframes`
     background-color: ${palettes[0].dark};
   }
   30% {
-    background-color: ${palettes[0].dark};
+    background-color: ${palettes[1].mid};
   }
   60% {
     background-color: ${palettes[1].dark};
