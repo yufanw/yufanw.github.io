@@ -7,9 +7,23 @@ import moonImage from '../assets/moon.gif';
 const rotate = keyframes`
   0% {
     transform: rotate(0deg);
+    scale: 0.8;
+  }
+  25% {
+    transform: rotate(90deg);
+    scale: 1.4;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 0.8;
+  }
+  75% {
+    transform: rotate(270deg);
+    scale: 1.4;
   }
   100% {
     transform: rotate(360deg);
+    scale: 0.8;
   }
 `;
 
@@ -24,14 +38,18 @@ const SkyDiv = styled.div`
   height: 60%;
   position: relative;
   overflow: hidden;
-  transition: background 2s ease-in-out;
-  background-attachment: fixed;
-  background-image: url(${starsImage});
-  background-color: ${({colors}) => colors.dark};
-  background-blend-mode: lighten;
   @media (max-width: 768px) {
     height: 55%;
   }
+`;
+
+const SkyImageDiv = styled.div`
+  height: 100%;
+  width: 100%;
+  transition: background 2s ease-in-out;
+  background-image: url(${starsImage});
+  background-color: ${({colors}) => colors.dark};
+  background-blend-mode: lighten;
 `;
 
 const WaterDiv = styled.div`
@@ -54,8 +72,8 @@ const WaterColorDiv = styled.div`
 
 const SunDiv = styled.div`
   background: ${({colors}) => colors.midLight};
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   transition: all 2s ease-in-out;
   filter: blur(1px) drop-shadow(0 0 20px ${({colors}) => colors.light});
@@ -66,8 +84,8 @@ const SunDiv = styled.div`
 `;
 
 const MoonImg = styled.img`
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   transition: all 2s ease-in-out;
   filter: blur(0.5px) drop-shadow(0 0 42px ${({colors}) => colors.mid});
   @media (max-width: 768px) {
@@ -107,7 +125,8 @@ function Sun() {
 
   return (
     <CenteredDiv onClick={selectColor}>
-      <SkyDiv colors={palettes[currentIndex]}>
+      <SkyDiv>
+        <SkyImageDiv colors={palettes[currentIndex]}/>
         <SunPositionDiv>
           <SunDiv colors={palettes[currentIndex]} />
           <MoonImg src={moonImage} colors={palettes[currentIndex]} />
