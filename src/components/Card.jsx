@@ -59,7 +59,7 @@ const CardImg = styled.img`
 `;
 
 const CardContentDiv = styled.div`
-  margin: 10px 20px;
+  padding: 10px 20px;
 `;
 
 const RightAlignDiv = styled.div`
