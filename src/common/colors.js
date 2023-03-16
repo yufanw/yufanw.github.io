@@ -16,7 +16,7 @@ export const purple = '#6C5B7B';
 
 export const palettes = [
   {
-    dark: '#472e47',
+    dark: '#664366',
     mid: '#EA9ABB',
     midLight: '#FEA5AD',
     light: '#F8C3AF',
@@ -27,16 +27,4 @@ export const palettes = [
     midLight: '#C06C84',
     light: '#F67280',
   } ,
-  {
-    dark: '#513252',
-    mid: '#7A4069',
-    midLight: '#CA4E79',
-    light: '#FFC18E',
-  },
-  {
-    dark: '#022d3b',
-    mid: '#6E7582',
-    midLight: '#BB8082',
-    light: '#F39189',
-  },
 ];

@@ -18,40 +18,50 @@ const changeColorDark = keyframes`
   0% {
     background-color: ${palettes[0].dark};
   }
-  25% {
+  30% {
+    background-color: ${palettes[0].dark};
+  }
+  60% {
     background-color: ${palettes[1].dark};
   }
-  50% {
-    background-color: ${palettes[2].dark};
-  }
-  75% {
-    background-color: ${palettes[3].dark};
+  90% {
+    background-color: ${palettes[1].dark};
   }
   100% {
     background-color: ${palettes[0].dark};
   }
 `;
 
-const changeColorMidLight = keyframes`
+const changeOpacity = keyframes`
   0% {
-    background-color: ${palettes[0].midLight};
-    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[0].light});
+    opacity: 0;
   }
   25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
+const changeColorMidLight = keyframes`
+  0% {
     background-color: ${palettes[1].midLight};
     filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[1].light});
   }
   50% {
-    background-color: ${palettes[2].midLight};
-    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[2].light});
-  }
-  75% {
-    background-color: ${palettes[3].midLight};
-    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[3].light});
-  }
-  100% {
     background-color: ${palettes[0].midLight};
     filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[0].light});
+  }
+  100% {
+    background-color: ${palettes[1].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[1].light});
   }
 `;
 
@@ -66,6 +76,7 @@ const SkyDiv = styled.div`
   height: 60%;
   position: relative;
   overflow: hidden;
+  animation: ${changeColorDark} 16s linear infinite;
   @media (max-width: 768px) {
     height: 55%;
   }
@@ -74,13 +85,9 @@ const SkyDiv = styled.div`
 const SkyImageDiv = styled.div`
   height: 100%;
   width: 100%;
-  animation: ${changeColorDark} 64s linear infinite;
+  animation: ${changeOpacity} 16s linear infinite;
   background-image: url(${starsImage});
   background-attachment: fixed;
-  background-blend-mode: screen;
-  @media (max-width: 768px) {
-    background-image: none;
-  }
 `;
 
 const WaterDiv = styled.div`
@@ -99,7 +106,7 @@ const WaterDiv = styled.div`
 `;
 
 const SunDiv = styled.div`
-  animation: ${changeColorMidLight} 32s linear infinite;
+  animation: ${changeColorMidLight} 8s linear infinite;
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -112,7 +119,7 @@ const SunDiv = styled.div`
 const MoonImg = styled.img`
   width: 140px;
   height: 140px;
-  filter: blur(0.5px) drop-shadow(0 0 20px ${gray1});
+  filter: blur(0.5px) drop-shadow(0 0 10px ${gray1});
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
