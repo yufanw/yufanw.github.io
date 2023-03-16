@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { palettes, blackish } from '../common/colors';
+import { palettes, blackish, gray1 } from '../common/colors';
 import starsImage from '../assets/stars.gif';
 import moonImage from '../assets/moon.gif';
 import vectorsImage from '../assets/vectors.jpg';
@@ -11,6 +11,47 @@ const rotate = keyframes`
   }
   100% {
     transform: rotate(360deg);
+  }
+`;
+
+const changeColorDark = keyframes`
+  0% {
+    background-color: ${palettes[0].dark};
+  }
+  25% {
+    background-color: ${palettes[1].dark};
+  }
+  50% {
+    background-color: ${palettes[2].dark};
+  }
+  75% {
+    background-color: ${palettes[3].dark};
+  }
+  100% {
+    background-color: ${palettes[0].dark};
+  }
+`;
+
+const changeColorMidLight = keyframes`
+  0% {
+    background-color: ${palettes[0].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[0].light});
+  }
+  25% {
+    background-color: ${palettes[1].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[1].light});
+  }
+  50% {
+    background-color: ${palettes[2].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[2].light});
+  }
+  75% {
+    background-color: ${palettes[3].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[3].light});
+  }
+  100% {
+    background-color: ${palettes[0].midLight};
+    filter: blur(0.5px) drop-shadow(0 0 20px ${palettes[0].light});
   }
 `;
 
@@ -33,11 +74,13 @@ const SkyDiv = styled.div`
 const SkyImageDiv = styled.div`
   height: 100%;
   width: 100%;
-  transition: background 2s ease-in-out;
+  animation: ${changeColorDark} 64s linear infinite;
   background-image: url(${starsImage});
-  background-color: ${({colors}) => colors.dark};
   background-attachment: fixed;
-  background-blend-mode: lighten;
+  background-blend-mode: screen;
+  @media (max-width: 768px) {
+    background-image: none;
+  }
 `;
 
 const WaterDiv = styled.div`
@@ -56,12 +99,10 @@ const WaterDiv = styled.div`
 `;
 
 const SunDiv = styled.div`
-  background: ${({colors}) => colors.midLight};
+  animation: ${changeColorMidLight} 32s linear infinite;
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  transition: all 2s ease-in-out;
-  filter: blur(1px) drop-shadow(0 0 20px ${({colors}) => colors.light});
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
@@ -71,8 +112,7 @@ const SunDiv = styled.div`
 const MoonImg = styled.img`
   width: 140px;
   height: 140px;
-  transition: all 2s ease-in-out;
-  filter: blur(0.5px) drop-shadow(0 0 42px ${({colors}) => colors.mid});
+  filter: blur(0.5px) drop-shadow(0 0 20px ${gray1});
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
@@ -95,27 +135,13 @@ const SunPositionDiv = styled.div`
 `;
 
 function Sun() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      selectColor();
-    }, 8000);
-    return () => clearInterval(interval);
-  });
-
-  const selectColor = () => {
-    let index = currentIndex + 1;
-    setCurrentIndex(index < palettes.length ? index : 0);
-  };
-
   return (
-    <CenteredDiv onClick={selectColor}>
+    <CenteredDiv>
       <SkyDiv>
-        <SkyImageDiv colors={palettes[currentIndex]}/>
+        <SkyImageDiv />
         <SunPositionDiv>
-          <SunDiv colors={palettes[currentIndex]} />
-          <MoonImg src={moonImage} colors={palettes[currentIndex]} />
+          <SunDiv />
+          <MoonImg src={moonImage} />
         </SunPositionDiv>
       </SkyDiv>
       <WaterDiv />
