@@ -89,7 +89,7 @@ const SunPositionDiv = styled.div`
   width: 50%;
   min-width: 460px;
   @media (max-width: 768px) {
-    left: 10%;
+    left: 0;
   }
 `;
 
