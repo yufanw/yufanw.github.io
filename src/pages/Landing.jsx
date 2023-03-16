@@ -110,7 +110,7 @@ const TallDividerDiv = styled.div`
 const GridDiv = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 40px;
 `;
 
 const InlineDiv = styled.div`

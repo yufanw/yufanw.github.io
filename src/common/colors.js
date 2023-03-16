@@ -1,5 +1,5 @@
 export const blackish = 'rgb(26, 27, 31)';
-export const gray7 = '#232526';
+export const gray7 = '#252728';
 export const gray6 = '#373D3F';
 export const gray5 = '#555F61';
 export const gray4 = '#707C80';

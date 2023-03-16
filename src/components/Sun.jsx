@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { blue, palettes, navy, teal } from '../common/colors';
+import { palettes, blackish } from '../common/colors';
 import starsImage from '../assets/stars.gif';
 import moonImage from '../assets/moon.gif';
+import vectorsImage from '../assets/vectors.jpg';
 
 const rotate = keyframes`
   0% {
@@ -55,20 +56,17 @@ const SkyImageDiv = styled.div`
 
 const WaterDiv = styled.div`
   height: 40%;
-  background: ${blue};
   position: relative;
+  background-image: url(${vectorsImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: ${blackish};
+  background-blend-mode: darken;
   @media (max-width: 768px) {
     height: 45%;
   }
-`;
-
-const WaterColorDiv = styled.div`
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: ${blue};
-  background: linear-gradient(178deg, ${teal} 0%, ${blue} 41%, ${navy} 92%);
 `;
 
 const SunDiv = styled.div`
@@ -133,9 +131,7 @@ function Sun() {
           <MoonImg src={moonImage} colors={palettes[currentIndex]} />
         </SunPositionDiv>
       </SkyDiv>
-      <WaterDiv>
-        <WaterColorDiv colors={palettes[currentIndex]} />
-      </WaterDiv>
+      <WaterDiv />
     </CenteredDiv>
   );
 };

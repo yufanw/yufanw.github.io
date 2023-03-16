@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {
   blackish,
   gray0,
-  gray3,
   gray6,
 } from '../common/colors';
 import vectorsImage from '../assets/vectors.jpg';
@@ -19,8 +18,8 @@ const CardDiv = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: ${gray3};
-  background-blend-mode: multiply;
+  background-color: ${blackish};
+  background-blend-mode: darken;
 `;
 
 const CardAnchor = styled.a`
@@ -91,7 +90,7 @@ const Card = ({ link, title, image, children }) => (
     <RightAlignDiv>
       <CardContentDiv>
         <CardAnchor href={link} rel="noopener noreferrer nofollow" target="_blank">
-          view
+          Company Site
         </CardAnchor>
       </CardContentDiv>
     </RightAlignDiv>
