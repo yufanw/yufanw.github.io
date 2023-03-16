@@ -49,6 +49,7 @@ const SkyImageDiv = styled.div`
   transition: background 2s ease-in-out;
   background-image: url(${starsImage});
   background-color: ${({colors}) => colors.dark};
+  background-attachment: fixed;
   background-blend-mode: lighten;
 `;
 
