@@ -1,25 +1,44 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { blue, palettes, navy, teal } from '../common/colors';
+import starsImage from '../assets/stars.gif';
+import moonImage from '../assets/moon.gif';
+
+const rotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const CenteredDiv = styled.div`
   height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
-  filter: brightness(70%)
 `;
 
-const LandDiv = styled.div`
+const SkyDiv = styled.div`
   height: 60%;
-  background: ${({colors}) => colors.mid};
-  transition: background 1s ease-in-out;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: background 2s ease-in-out;
+  background-attachment: fixed;
+  background-image: url(${starsImage});
+  background-color: ${({colors}) => colors.dark};
+  background-blend-mode: screen;
 `;
 
 const WaterDiv = styled.div`
   height: 40%;
   background: ${blue};
-  width: 100%;
   position: relative;
+  @media (max-width: 768px) {
+    height: 50%;
+  }
 `;
 
 const WaterColorDiv = styled.div`
@@ -32,20 +51,41 @@ const WaterColorDiv = styled.div`
 `;
 
 const SunDiv = styled.div`
-  background: ${({colors}) => colors.light};
+  background: ${({colors}) => colors.midLight};
   width: 160px;
-  height: 160px:
-  min-width: 160px;
-  min-height: 160px;
+  height: 160px;
   border-radius: 50%;
-  transition: background 1s ease-in-out;
+  transition: all 2s ease-in-out;
+  filter: blur(1px) drop-shadow(0 0 20px ${({colors}) => colors.light});
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+`;
+
+const MoonImg = styled.img`
+  width: 160px;
+  height: 160px;
+  transition: all 2s ease-in-out;
+  filter: blur(0.5px) drop-shadow(0 0 42px ${({colors}) => colors.mid});
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 const SunPositionDiv = styled.div`
-  height: 160px;
+  animation: ${rotate} 16s linear infinite;
   position: absolute;
-  top: 40%;
-  left: 28%;
+  display: flex;
+  justify-content: space-between;
+  left: 30%;
+  top: 90%;
+  width: 50%;
+  min-width: 460px;
+  @media (max-width: 768px) {
+    left: 10%;
+  }
 `;
 
 function Sun() {
@@ -54,27 +94,25 @@ function Sun() {
   useEffect(() => {
     const interval = setInterval(() => {
       selectColor();
-    }, 2000);
+    }, 8000);
     return () => clearInterval(interval);
   });
 
   const selectColor = () => {
     let index = currentIndex + 1;
-    if (index >= palettes.length) {
-      return setCurrentIndex(0);
-    }
-    setCurrentIndex(index);
+    setCurrentIndex(index < palettes.length ? index : 0);
   };
 
   return (
     <CenteredDiv onClick={selectColor}>
-      <LandDiv colors={palettes[currentIndex]}>
+      <SkyDiv colors={palettes[currentIndex]}>
         <SunPositionDiv>
-          <SunDiv colors={palettes[currentIndex]}/>
+          <SunDiv colors={palettes[currentIndex]} />
+          <MoonImg src={moonImage} colors={palettes[currentIndex]} />
         </SunPositionDiv>
-      </LandDiv>
+      </SkyDiv>
       <WaterDiv>
-        <WaterColorDiv colors={palettes[currentIndex]}/>
+        <WaterColorDiv colors={palettes[currentIndex]} />
       </WaterDiv>
     </CenteredDiv>
   );

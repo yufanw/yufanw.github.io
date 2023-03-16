@@ -16,33 +16,27 @@ export const purple = '#6C5B7B';
 
 export const palettes = [
   {
-    dark: '#355C7D',
-    mid: '#6C5B7B',
-    midLight: '#C06C84',
-    light: '#F67280',
-  } ,
-  {
-    dark: '#046582',
-    mid: '#6E7582',
-    midLight: '#BB8082',
-    light: '#F39189',
-  },
-  {
-    dark: '#BE8ABF',
+    dark: '#472e47',
     mid: '#EA9ABB',
     midLight: '#FEA5AD',
     light: '#F8C3AF',
   },
   {
-    dark: '#2D4059',
-    mid: '#EA5455',
-    midLight: '#F07B3F',
-    light: '#FFD460',
-  },
+    dark: '#20364a',
+    mid: '#6C5B7B',
+    midLight: '#C06C84',
+    light: '#F67280',
+  } ,
   {
     dark: '#513252',
     mid: '#7A4069',
     midLight: '#CA4E79',
     light: '#FFC18E',
+  },
+  {
+    dark: '#022d3b',
+    mid: '#6E7582',
+    midLight: '#BB8082',
+    light: '#F39189',
   },
 ];

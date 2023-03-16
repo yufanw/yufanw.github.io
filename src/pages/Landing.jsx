@@ -13,6 +13,7 @@ import subjectImage from '../assets/subject.png';
 import buildopsImage from '../assets/buildops.png';
 import gociousImage from '../assets/gocious.png';
 
+
 const RelativeDiv = styled.div`
   position: relative;
   padding: 20px;
@@ -32,7 +33,7 @@ const ArtDiv = styled.div`
 const H1 = styled.h1`
   font-size: 38px;
   margin: 0;
-  padding: 10px 0;
+  padding: 6px 0;
 `;
 
 const H4 = styled.h4`
@@ -86,9 +87,14 @@ const SocialAnchor = styled.a`
       color: ${gray0};
     }
     :hover {
-      border-radius: 5px;
+      filter: invert(100%);
     }
   }
+`;
+
+const ShortDividerDiv = styled.div`
+  padding-bottom: 10px;
+  height: 1px;
 `;
 
 const DividerDiv = styled.div`
@@ -119,6 +125,13 @@ const PositionedDiv = styled.div`
   padding: 0 20px;
 `;
 
+const NoteDiv = styled.div`
+  opacity: 0.8;
+  font-size: 16px;
+  text-align: right;
+  font-style: italic;
+`;
+
 function Landing() {
   const year = new Date().getFullYear();
   return (
@@ -128,6 +141,7 @@ function Landing() {
         <PositionedDiv>
           <H1>Yufan Wang</H1>
           <H4>I build web applications, mostly in React and Typescript</H4>
+          <ShortDividerDiv />
           <InlineDiv>
             <SocialAnchor
               href="https://www.github.com/yufanw/"
@@ -151,6 +165,7 @@ function Landing() {
           <TallDividerDiv />
         </PositionedDiv>
       </ArtDiv>
+      <ShortDividerDiv />
       <TallDividerDiv />
       <DividerLine />
       <TallDividerDiv />
@@ -163,16 +178,28 @@ function Landing() {
             image={buildopsImage}
           >
             Cloud-based Operational Platform for commercial contractors
+            <DividerDiv />
+            <NoteDiv>
+              Software Engineer III
+            </NoteDiv>
           </Card>
         </ContentDiv>
         <ContentDiv>
           <Card link="https://subject.com" title="Subject" image={subjectImage}>
             Accredited LMS for high schools and districts to accelerate learning
+            <DividerDiv />
+            <NoteDiv>
+              Senior Software Engineer
+            </NoteDiv>
           </Card>
         </ContentDiv>
         <ContentDiv>
           <Card link="https://gocious.com" title="Gocious" image={gociousImage}>
             Product Roadmap Management for manufacturers
+            <DividerDiv />
+            <NoteDiv>
+              Software Engineer II
+            </NoteDiv>
           </Card>
         </ContentDiv>
       </GridDiv>

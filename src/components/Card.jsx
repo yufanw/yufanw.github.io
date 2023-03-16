@@ -3,20 +3,28 @@ import styled from 'styled-components';
 import {
   blackish,
   gray0,
-  gray1,
+  gray3,
 } from '../common/colors';
+import vectorsImage from '../assets/vectors.jpg';
 
 const CardDiv = styled.div`
   max-width: 980px;
   display: flex;
   flex-flow: column;
   box-shadow: ${blackish} 0px 2px 4px 0px, ${blackish} 0px 2px 16px 0px;
+  background-image: url(${vectorsImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: ${gray3};
+  background-blend-mode: multiply;
 `;
 
 const CardAnchor = styled.a`
   --b: 1px;   /* border thickness */
   --s: .3em; /* size of the corner */
-  --color: ${gray1}
+  --color: ${gray0}
 
   padding: calc(.2em + var(--s)) calc(.5em + var(--s));
   color: var(--color);
@@ -51,7 +59,6 @@ const CardImg = styled.img`
 
 const CardContentDiv = styled.div`
   margin: 10px 20px;
-  color: ${gray1};
 `;
 
 const RightAlignDiv = styled.div`
