@@ -108,6 +108,7 @@ const MoonDiv = styled.div`
   background-color: ${gray1};
   border-radius: 50%;
   filter: drop-shadow(0 0 10px ${gray1});
+  position: relative;
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
@@ -130,8 +131,8 @@ const MoonspotDivTwo = styled.div`
   background-color: ${gray3};
   border-radius: 50%;
   position: absolute;
-  top: 100px;
-  left: 40px;
+  top: 90px;
+  left: 50px;
 `;
 
 const SunPositionDiv = styled.div`
