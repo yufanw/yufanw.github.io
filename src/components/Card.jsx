@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { blackish, gray0, gray6, gray7, coral } from '../common/colors';
+import { blackish, gray0, gray6, gray7 } from '../common/colors';
 
 const CardDiv = styled.div`
   background: linear-gradient(to right bottom, ${blackish}, ${gray6} 92%);
@@ -30,10 +30,9 @@ const AnchorDiv = styled.div`
     text-align: center;
   }
   :hover {
-    color: #fff;
     .fa {
       background: ${gray0};
-      color: ${coral};
+      color: ${gray7};
     }
   }
 `;
@@ -89,7 +88,7 @@ const Card = ({ link, title, image, children }) => (
             target="_blank"
           />
           <GrowSpan>Visit</GrowSpan>
-          <span className="fa fa-rocket"></span>
+          <span className="fa fa-hand-o-right"></span>
         </AnchorDiv>
       </CardContentDiv>
     </RightAlignDiv>
