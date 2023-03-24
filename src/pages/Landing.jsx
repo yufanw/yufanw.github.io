@@ -136,7 +136,7 @@ function Landing() {
           <Sun />
           <PositionedDiv>
             <H1>Yufan Wang</H1>
-            <H4>I build web applications, mostly in React and Typescript</H4>
+            <H4>I build things for the web</H4>
             <ShortDividerDiv />
             <InlineDiv>
               <SocialAnchor
