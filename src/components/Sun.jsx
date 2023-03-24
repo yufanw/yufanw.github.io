@@ -14,13 +14,16 @@ const rotate = keyframes`
 
 const changeColorDark = keyframes`
   0% {
-    background-color: ${palettes[1].dark};
+    background-color: ${palettes[1].mid};
   }
   30% {
+    background-color: ${palettes[1].dark};
+  }
+  60% {
     background-color: ${palettes[1].mid};
   }
   100% {
-    background-color: ${palettes[1].dark};
+    background-color: ${palettes[1].mid};
   }
 `;
 
