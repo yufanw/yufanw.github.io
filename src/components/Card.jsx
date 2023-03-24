@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  blackish,
-  gray0,
-  gray6,
-} from '../common/colors';
-import vectorsImage from '../assets/vectors.jpg';
+import { blackish, gray0, gray6, gray7, coral } from '../common/colors';
 
 const CardDiv = styled.div`
   background: linear-gradient(to right bottom, ${blackish}, ${gray6} 92%);
@@ -13,43 +8,47 @@ const CardDiv = styled.div`
   display: flex;
   flex-flow: column;
   box-shadow: ${blackish} 0px 2px 4px 0px, ${blackish} 0px 2px 16px 0px;
-  background-image: url(${vectorsImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: ${blackish};
-  background-blend-mode: darken;
+  padding-bottom: 20px;
+`;
+
+const AnchorDiv = styled.div`
+  width: 160px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: ${gray0};
+  text-decoration: none;
+  font-size: 16px;
+  background: ${gray7};
+  border-radius: 6px;
+  border: 2px solid ${gray7};
+  box-sizing: border-box;
+  overflow: hidden;
+  .fa {
+    box-sizing: border-box;
+    padding: 8px;
+    text-align: center;
+  }
+  :hover {
+    color: #fff;
+    .fa {
+      background: ${gray0};
+      color: ${coral};
+    }
+  }
+`;
+
+const GrowSpan = styled.span`
+  flex-grow: 1;
+  text-align: center;
 `;
 
 const CardAnchor = styled.a`
-  --b: 1px;   /* border thickness */
-  --s: .3em; /* size of the corner */
-  --color: ${gray0}
-
-  padding: calc(.2em + var(--s)) calc(.5em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-  transition: .3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: .6em;
-  font-size: 16px;
-  text-decoration: none;
-  border: 0;
-  user-select: none;
-  :hover,
-  :focus-visible {
-    --_p: 0px;
-    outline-color: var(--color);
-    outline-offset: .01em;
-  }
-  :active {
-    background: var(--color);
-    color: #fff;
-  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 const CardImg = styled.img`
@@ -63,10 +62,8 @@ const CardContentDiv = styled.div`
 `;
 
 const RightAlignDiv = styled.div`
-  right: 0;
-  bottom: 0;
-  margin: 10px;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 const H2 = styled.h2`
@@ -80,18 +77,20 @@ const Card = ({ link, title, image, children }) => (
   <CardDiv>
     <CardImg src={image} />
     <CardContentDiv>
-      <H2>
-        {title}
-      </H2>
+      <H2>{title}</H2>
     </CardContentDiv>
-    <CardContentDiv>
-      {children}
-    </CardContentDiv>
+    <CardContentDiv>{children}</CardContentDiv>
     <RightAlignDiv>
       <CardContentDiv>
-        <CardAnchor href={link} rel="noopener noreferrer nofollow" target="_blank">
-          Company Site
-        </CardAnchor>
+        <AnchorDiv>
+          <CardAnchor
+            href={link}
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          />
+          <GrowSpan>Visit</GrowSpan>
+          <span className="fa fa-rocket"></span>
+        </AnchorDiv>
       </CardContentDiv>
     </RightAlignDiv>
   </CardDiv>

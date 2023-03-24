@@ -1,9 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { palettes, blackish, gray1 } from '../common/colors';
+import { palettes, blackish, gray1, gray3 } from '../common/colors';
 import starsImage from '../assets/stars.gif';
-import moonImage from '../assets/moon.gif';
-import vectorsImage from '../assets/vectors.jpg';
 
 const rotate = keyframes`
   0% {
@@ -16,19 +14,13 @@ const rotate = keyframes`
 
 const changeColorDark = keyframes`
   0% {
-    background-color: ${palettes[0].dark};
+    background-color: ${palettes[1].dark};
   }
   30% {
     background-color: ${palettes[1].mid};
   }
-  60% {
-    background-color: ${palettes[1].dark};
-  }
-  90% {
-    background-color: ${palettes[1].dark};
-  }
   100% {
-    background-color: ${palettes[0].dark};
+    background-color: ${palettes[1].dark};
   }
 `;
 
@@ -40,10 +32,10 @@ const changeOpacity = keyframes`
     opacity: 0;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   75% {
-    opacity: 0.8;
+    opacity: 0.9;
   }
   100% {
     opacity: 0;
@@ -93,13 +85,7 @@ const SkyImageDiv = styled.div`
 const WaterDiv = styled.div`
   height: 40%;
   position: relative;
-  background-image: url(${vectorsImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   background-color: ${blackish};
-  background-blend-mode: darken;
   @media (max-width: 768px) {
     height: 45%;
   }
@@ -116,14 +102,36 @@ const SunDiv = styled.div`
   }
 `;
 
-const MoonImg = styled.img`
+const MoonDiv = styled.div`
   width: 140px;
   height: 140px;
-  filter: blur(0.5px) drop-shadow(0 0 10px ${gray1});
+  background-color: ${gray1};
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px ${gray1});
   @media (max-width: 768px) {
     width: 120px;
     height: 120px;
   }
+`;
+
+const MoonspotDivOne = styled.div`
+  width: 30px;
+  height: 30px;
+  background-color: ${gray3};
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+`;
+
+const MoonspotDivTwo = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: ${gray3};
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 40px;
 `;
 
 const SunPositionDiv = styled.div`
@@ -148,12 +156,15 @@ function Sun() {
         <SkyImageDiv />
         <SunPositionDiv>
           <SunDiv />
-          <MoonImg src={moonImage} />
+          <MoonDiv>
+            <MoonspotDivOne />
+            <MoonspotDivTwo />
+          </MoonDiv>
         </SunPositionDiv>
       </SkyDiv>
       <WaterDiv />
     </CenteredDiv>
   );
-};
+}
 
 export default Sun;
